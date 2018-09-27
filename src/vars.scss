@@ -1,14 +1,15 @@
 // Brand Colors
-$brand-blue: rgb(12, 122, 192);
-$brand-red: rgb(179, 32, 35);
-$brand-yellow: rgb(244, 167, 0);
-$brand-grey: rgb(84, 106, 120);
+$brand-blue: #e1fcff;
+$brand-purple: #e6e3f4;
+$brand-grey: #7c838e;
+$brand-white: rgb(235, 242, 245);
+$brand-black: #40434e;
 
 // Color Roles
 $primary: $brand-blue;
-$secondary: $brand-grey;
-$warning: $brand-yellow;
-$danger: $brand-red;
+$secondary: $brand-purple;
+// $warning: $brand-yellow;
+// $danger: $brand-red;
 
 // Typography
 $font-mono: "Courier", monospace;
@@ -29,3 +30,4 @@ $base-radius: 0.25rem;
 
 // Shadows
 $base-box-shadow: rgba(darken($brand-grey, 20%), 0.2) 0 0 5px;
+// box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
