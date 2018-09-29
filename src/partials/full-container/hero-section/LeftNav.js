@@ -6,29 +6,14 @@ import Li from "./Li";
 const Left = styled.nav`
   max-width: 150px;
   .navbar-nav {
-    ${"" /* &::before{
-      content: '';
-      display: block;
-      height: 1px;
-      width: 50px;
-      margin: 40px auto 10px auto;
-      background ${props => props.theme.white};
-    }
-    &::after{
-      content: '';
-      display: block;
-      height: 1px;
-      width: 50px;
-      margin: 10px auto 40px auto;
-      background ${props => props.theme.white};
-    } */} padding-left: 0;
+    padding-left: 0;
     .nav-item {
       list-style: none;
       padding: 15px;
       margin-left: 0;
       text-align: center;
       text-transform: capitalize;
-      transition: all 0.3s ease;
+      transition: ${props => props.theme.transition};
       &::after {
         content: "";
         display: block;
@@ -37,7 +22,7 @@ const Left = styled.nav`
         background-color: transparent;
         margin: 0 auto;
         margin-top: 5px;
-        transition: all 0.3s ease;
+        transition: ${props => props.theme.transition};
       }
       a {
         color: ${props => props.theme.white};
