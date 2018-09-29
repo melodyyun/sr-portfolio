@@ -10,6 +10,7 @@ import FullContainer from "./partials/full-container/FullContainer";
 const theme = require('sass-extract-loader?{"plugins": ["sass-extract-js"]}!./vars.scss');
 /* eslint-enable*/
 
+//background styling
 const Bg = styled.div`
   background: url("./assets/images/black-sand.jpg");
   background-size: 110vw 110vh;
@@ -29,12 +30,15 @@ class App extends Component {
     super();
   }
 
+  //referencing callback Ref made with innerRef
+  //We needed to to this because a regular callback wouldn't work with styled components
   handleMouseMove = e => {
-    console.log((e.pageX * -1) / 15, (e.pageY * -1) / 15);
+    // mouse move variables
+    let x = (e.pageX * -1) / 15;
+    let y = (e.pageY * -1) / 15;
+    //background innerRef
     const background = this.back;
-    background.style.backgroundPosition = `${(e.pageX * -1) / 15}px,${(e.pageY *
-      -1) /
-      15}px`;
+    background.style.backgroundPosition = `${x}px ${y}px`;
   };
 
   render() {
