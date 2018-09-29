@@ -1,13 +1,13 @@
 // Brand Colors
-$brand-blue: #e1fcff;
-$brand-purple: #e6e3f4;
-$brand-grey: #7c838e;
-$brand-white: rgb(235, 242, 245);
-$brand-black: #40434e;
+$blue: #e1fcff;
+$purple: #e6e3f4;
+$grey: #7c838e;
+$white: rgb(235, 242, 245);
+$black: #40434e;
 
 // Color Roles
-$primary: $brand-blue;
-$secondary: $brand-purple;
+$primary: $blue;
+$secondary: $purple;
 // $warning: $brand-yellow;
 // $danger: $brand-red;
 
@@ -15,7 +15,7 @@ $secondary: $brand-purple;
 $font-mono: "Courier", monospace;
 $font-sans: "Source Sans Pro", Arial, sans-serif;
 $font-serif: "Bree Serif", Times, serif;
-$base-font-color: $brand-grey;
+$base-font-color: $grey;
 $base-font-family: $font-sans;
 $base-font-size: 16px;
 $font-normal: 400;
@@ -25,9 +25,9 @@ $base-line-height: 1.5;
 $headings: (6, 5, 4, 3, 2, 1);
 
 // Borders
-$base-border: 1px solid $brand-grey;
-$base-radius: 0.25rem;
+$border: 1px solid $white;
+$radius: 0.25rem;
 
 // Shadows
-$base-box-shadow: rgba(darken($brand-grey, 20%), 0.2) 0 0 5px;
+$base-box-shadow: rgba(darken($grey, 20%), 0.2) 0 0 5px;
 // box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);

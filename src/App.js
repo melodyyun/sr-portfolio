@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
-import Hero from "./partials/Hero";
+import Background from "./partials/Background";
+import Border from "./partials/Border";
+import FullContainer from "./partials/full-container/FullContainer";
 
 //Extract our Sass variables into a JS object
 /* eslint-disable*/
@@ -12,7 +14,11 @@ class App extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <Hero />
+        <React.Fragment>
+          <Background />
+          <Border theme={ theme }/>
+          <FullContainer />
+        </React.Fragment>
       </ThemeProvider>
     );
   }
