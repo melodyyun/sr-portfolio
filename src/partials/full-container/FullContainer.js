@@ -9,12 +9,14 @@ const Container = styled.section`
   position: relative;
 `;
 
-const FullContainer = props => {
-  return (
-    <Container>
-      <SectionContainer leftNav={<LeftNav theme={props.theme} />} />
-    </Container>
-  );
-};
+class FullContainer extends React.Component {
+  render() {
+    return (
+      <Container>
+        <SectionContainer leftNav={<LeftNav theme={this.props.theme} />} />
+      </Container>
+    );
+  }
+}
 
 export default FullContainer;
