@@ -12,6 +12,7 @@ const BorderLight = styled.div`
   transform: translate(-50%, -50%);
   background: transparent;
   pointer-events: none;
+  transition: all 0.3s ease;
 `;
 
 const Border = props => {

@@ -10,11 +10,10 @@ $primary: $blue;
 $secondary: $purple;
 
 // Typography
-$fontPrimary: 'Montserrat', sans-serif;
-$fontSecondary: 'Amatic SC', cursive;
+$fontPrimary: "Montserrat", sans-serif;
+$fontSecondary: "Amatic SC", cursive;
 $font-serif: "Bree Serif", Times, serif;
 $base-font-size: 16px;
-
 
 // Borders
 $border: 1px solid $white;
@@ -23,3 +22,6 @@ $radius: 0.25rem;
 // Shadows
 $base-box-shadow: rgba(darken($grey, 20%), 0.2) 0 0 5px;
 // box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+//Transition
+$transition: all 0.3s ease;

@@ -12,14 +12,6 @@ const Bg = styled.div`
   overflow: hidden;
 `;
 
-class Background extends Component {
-  constructor() {
-    super();
-  }
-
-  render() {
-    return <Bg id="background" />;
-  }
-}
+const Background = () => <Bg id="background" />;
 
 export default Background;
