@@ -1,21 +1,42 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import styled from "styled-components";
+import Logo from "./Logo";
 
 const Left = styled.nav`
-  .navbar-nav{
+  max-width: 150px;
+  .navbar-nav {
+    &::before{
+      content: '';
+      display: block;
+      height: 1px;
+      width: 50px;
+      margin: 40px auto 10px auto;
+      background ${props => props.theme.white};
+    }
+    &::after{
+      content: '';
+      display: block;
+      height: 1px;
+      width: 50px;
+      margin: 10px auto 40px auto;
+      background ${props => props.theme.white};
+    }
     padding-left: 0;
-    .nav-item{
+    .nav-item {
       list-style: none;
-      padding: 10px 40px 10px 10px;
+      padding: 12px;
       margin-left: 0;
-      a{
-        color: ${props => props.theme.white };
+      text-align: center;
+      a {
+        color: ${props => props.theme.white};
         text-decoration: none;
         font-weight: 300;
+        letter-spacing: 0.1rem;
       }
-      &.active{
-        a{
+      &.active {
+        a {
           font-weight: 500;
+          color: ${props => props.theme.blue};
         }
       }
     }
@@ -28,6 +49,7 @@ class LeftNav extends Component {
   render() {
     return (
       <Left id="left-nav" className="navbar-sidebar">
+        <Logo />
         <ul className="navbar-nav">
           <li className="nav-item active" data-menuanchor="home">
             <a href="#home">

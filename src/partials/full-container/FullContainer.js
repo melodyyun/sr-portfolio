@@ -1,9 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import SectionContainer from './SectionContainer';
-import Logo from './hero-section/Logo';
-import LeftNav from './hero-section/LeftNav';
-
+import React from "react";
+import styled from "styled-components";
+import SectionContainer from "./SectionContainer";
+import LeftNav from "./hero-section/LeftNav";
 
 const Container = styled.section`
   width: 100vw;
@@ -11,19 +9,12 @@ const Container = styled.section`
   position: relative;
 `;
 
-const FullContainer = (props) => {
-  return(
+const FullContainer = props => {
+  return (
     <Container>
-      <SectionContainer 
-        logo={ 
-          <Logo />
-        }
-        leftNav = {
-          <LeftNav theme={props.theme}/> 
-        }
-      />
+      <SectionContainer leftNav={<LeftNav theme={props.theme} />} />
     </Container>
-  )
+  );
 };
 
 export default FullContainer;
