@@ -19,7 +19,7 @@ const FullContainer = (props) => {
           <Logo />
         }
         leftNav = {
-          <LeftNav /> 
+          <LeftNav theme={props.theme}/> 
         }
       />
     </Container>

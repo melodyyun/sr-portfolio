@@ -8,21 +8,13 @@ $black: #40434e;
 // Color Roles
 $primary: $blue;
 $secondary: $purple;
-// $warning: $brand-yellow;
-// $danger: $brand-red;
 
 // Typography
-$font-mono: "Courier", monospace;
-$font-sans: "Source Sans Pro", Arial, sans-serif;
+$fontPrimary: 'Montserrat', sans-serif;
+$fontSecondary: 'Amatic SC', cursive;
 $font-serif: "Bree Serif", Times, serif;
-$base-font-color: $grey;
-$base-font-family: $font-sans;
 $base-font-size: 16px;
-$font-normal: 400;
-$font-semibold: 600;
-$font-bold: 700;
-$base-line-height: 1.5;
-$headings: (6, 5, 4, 3, 2, 1);
+
 
 // Borders
 $border: 1px solid $white;

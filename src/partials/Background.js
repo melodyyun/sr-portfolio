@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 const Bg = styled.div`
-  background: url('./assets/images/constrast-sea.jpg');
+  background: url('./assets/images/black-sand.jpg');
   background-size: cover;
   background-position: center;
   position: fixed;
