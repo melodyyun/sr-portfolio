@@ -17,6 +17,7 @@ const Bg = styled.div`
   width: 100vw;
   overflow: hidden;
   background-attachment: fixed;
+  transition: all 0.01s linear;
   @media (max-width: 1024px) {
     background: url("./assets/images/constrast-sea.jpg");
     background-size: 110vw 110vh;
@@ -30,8 +31,8 @@ class App extends Component {
   //We needed to to this because a regular callback wouldn't work with styled components
   handleMouseMove = e => {
     // mouse move variables
-    let x = (e.pageX * -1) / 15;
-    let y = (e.pageY * -1) / 15;
+    let x = (e.pageX * -1) / 20;
+    let y = (e.pageY * -1) / 20;
     //background innerRef
     const background = this.back;
     background.style.backgroundPosition = `${x}px ${y}px`;
