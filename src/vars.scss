@@ -2,8 +2,8 @@
 $blue: #e1fcff;
 $purple: #e6e3f4;
 $grey: #7c838e;
-$white: rgb(235, 242, 245);
-$black: #40434e;
+$white: #fdfeff;
+$black: #1a1b1f;
 
 // Color Roles
 $primary: $blue;
@@ -20,8 +20,9 @@ $border: 1px solid $white;
 $radius: 0.25rem;
 
 // Shadows
-$base-box-shadow: rgba(darken($grey, 20%), 0.2) 0 0 5px;
-// box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+$boxShadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+// Hover: box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+// Maybe with a .5sec transition
 
 //Transition
 $transition: all 0.3s ease;

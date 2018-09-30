@@ -1,16 +1,47 @@
 import React from "react";
-// import styled from "styled-components";
+import styled from "styled-components";
+
+const MainTitle = styled.div`
+  padding-top: 150px;
+  max-width: 650px;
+  margin-left: 200px;
+  color: ${props => props.theme.white};
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 200px;
+    width: 250px;
+    background-color: ${props => props.theme.white};
+    opacity: 0.2;
+    filter: alpha(opacity=20); /* For IE8 and earlier */
+    transform: skewY(20deg);
+    top: 190px;
+    left: 250px;
+  }
+  .title {
+    font-size: 90px;
+    max-width: 200px;
+    font-weight: 700;
+  }
+  .sub-heading {
+    font-size: 20px;
+    font-weight: 500;
+  }
+`;
 
 const Title = () => {
   return (
-    <div className="title-container">
+    <MainTitle className="title-container">
       <div className="title">Saad Rahman.</div>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit sint
-        facere repudiandae recusandae magnam fuga temporibus nam ab fugit!
-        Repellat.
+      <p className="sub-heading">
+        Likes: long walks on black sand beaches, pho, aspens
+        <span role="img" aria-label="puppy emoji">
+          🐶
+        </span>
+        . >>>>CLICK HERE FOR 20 REASONS YOU HAVE TO WORK WITH ME!!!!!! .
       </p>
-    </div>
+    </MainTitle>
   );
 };
 

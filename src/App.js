@@ -16,15 +16,25 @@ const Bg = styled.div`
   background-size: 110vw 110vh;
   background-repeat: no-repeat;
   width: 100vw;
+  height: 100vh;
   overflow: hidden;
   background-attachment: fixed;
   transition: all 0.01s linear;
+  filter: brightness(0.4);
+  z-index: -1;
+  position: fixed;
   @media (max-width: 1024px) {
     background: url("./assets/images/constrast-sea.jpg");
     background-size: 110vw 110vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
+`;
+
+//main styling
+const Main = styled.main`
+  transition: all 0.01s linear;
+  width: 100vw;
 `;
 
 class App extends Component {
@@ -42,14 +52,17 @@ class App extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <Bg
-          innerRef={b => (this.back = b)}
-          onMouseMove={e => this.handleMouseMove(e)}
-        >
-          <Border theme={theme} />
-          <LeftNav />
-          <FullContainer />
-        </Bg>
+        <React.Fragment>
+          <Bg
+            innerRef={b => (this.back = b)}
+            onMouseMove={e => this.handleMouseMove(e)}
+          />
+          <Main className="main-container">
+            <Border theme={theme} />
+            <LeftNav />
+            <FullContainer />
+          </Main>
+        </React.Fragment>
       </ThemeProvider>
     );
   }

@@ -7,8 +7,8 @@ const SecContainer = styled.div`
   height: calc(100vh - 100px);
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 50px;
-  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 `;
 
 const SectionContainer = props => {
