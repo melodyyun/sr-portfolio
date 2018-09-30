@@ -5,6 +5,10 @@ import Li from "./Li";
 
 const Left = styled.nav`
   max-width: 150px;
+  margin-left: 50px;
+  margin-top: 180px;
+  position fixed;
+  z-index: 1;
   .navbar-nav {
     padding-left: 0;
     .nav-item {
@@ -45,7 +49,7 @@ const Left = styled.nav`
         }
         &::after {
           background-color: ${props => props.theme.blue};
-          width: 70px;
+          width: 67px;
         }
       }
     }

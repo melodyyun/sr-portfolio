@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import SectionContainer from "./SectionContainer";
-import LeftNav from "./hero-section/LeftNav";
+import Title from "./hero-section/Title";
 
 const Container = styled.section`
   width: 100vw;
@@ -12,8 +12,8 @@ class FullContainer extends React.Component {
   render() {
     return (
       <Container>
-        <SectionContainer leftNav={<LeftNav theme={this.props.theme} />} />
-        <SectionContainer leftNav={<LeftNav theme={this.props.theme} />} />
+        <SectionContainer children={<Title theme={this.props.title} />} />
+        <SectionContainer children={<Title theme={this.props.title} />} />
       </Container>
     );
   }

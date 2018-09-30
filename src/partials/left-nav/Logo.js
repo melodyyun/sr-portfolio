@@ -6,7 +6,6 @@ const LogoAnchor = styled.a`
   height: 70px;
   display: block;
   margin: 0 auto;
-  padding-top: 30px;
   &:hover img {
     box-shadow: 0px 0px 10px #fff;
   }

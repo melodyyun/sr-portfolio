@@ -12,6 +12,6 @@ const SecContainer = styled.div`
 `;
 
 const SectionContainer = props => {
-  return <SecContainer>{props.leftNav}</SecContainer>;
+  return <SecContainer>{props.children}</SecContainer>;
 };
 export default SectionContainer;

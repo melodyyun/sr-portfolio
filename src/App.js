@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
 import Border from "./partials/Border";
 import FullContainer from "./partials/full-container/FullContainer";
+import LeftNav from "./partials/left-nav/LeftNav";
 
 //Extract our Sass variables into a JS object
 /* eslint-disable*/
@@ -46,6 +47,7 @@ class App extends Component {
           onMouseMove={e => this.handleMouseMove(e)}
         >
           <Border theme={theme} />
+          <LeftNav />
           <FullContainer />
         </Bg>
       </ThemeProvider>
