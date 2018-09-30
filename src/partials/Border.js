@@ -1,4 +1,4 @@
-import React, { component } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const BorderLight = styled.div`

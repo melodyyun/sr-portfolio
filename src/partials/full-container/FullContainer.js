@@ -5,7 +5,6 @@ import LeftNav from "./hero-section/LeftNav";
 
 const Container = styled.section`
   width: 100vw;
-  height: 100vh;
   position: relative;
 `;
 
@@ -13,6 +12,7 @@ class FullContainer extends React.Component {
   render() {
     return (
       <Container>
+        <SectionContainer leftNav={<LeftNav theme={this.props.theme} />} />
         <SectionContainer leftNav={<LeftNav theme={this.props.theme} />} />
       </Container>
     );

@@ -1,13 +1,14 @@
-import React, { component } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const SecContainer = styled.div`
   position: relative;
   width: calc(100% - 100px);
-  height: calc(100% - 100px);
-  top: 50%;
+  height: calc(100vh - 100px);
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  margin-top: 50px;
+  margin-bottom: 50px;
 `;
 
 const SectionContainer = props => {

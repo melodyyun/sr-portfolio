@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
-import Background from "./partials/Background";
 import Border from "./partials/Border";
 import FullContainer from "./partials/full-container/FullContainer";
 
@@ -15,21 +14,18 @@ const Bg = styled.div`
   background: url("./assets/images/black-sand.jpg");
   background-size: 110vw 110vh;
   background-repeat: no-repeat;
-  height: 100vh;
   width: 100vw;
   overflow: hidden;
+  background-attachment: fixed;
   @media (max-width: 1024px) {
     background: url("./assets/images/constrast-sea.jpg");
     background-size: 110vw 110vh;
     background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 `;
 
 class App extends Component {
-  constructor() {
-    super();
-  }
-
   //referencing callback Ref made with innerRef
   //We needed to to this because a regular callback wouldn't work with styled components
   handleMouseMove = e => {
