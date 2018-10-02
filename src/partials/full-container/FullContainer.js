@@ -12,8 +12,14 @@ class FullContainer extends React.Component {
   render() {
     return (
       <Container>
-        <SectionContainer children={<Title theme={this.props.title} />} />
-        <SectionContainer children={<Title theme={this.props.title} />} />
+        <SectionContainer
+          id="home"
+          children={<Title theme={this.props.title} />}
+        />
+        <SectionContainer
+          id="about"
+          children={<Title theme={this.props.title} />}
+        />
       </Container>
     );
   }

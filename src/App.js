@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import Border from "./partials/Border";
 import FullContainer from "./partials/full-container/FullContainer";
 import LeftNav from "./partials/left-nav/LeftNav";
+import SocialNav from "./partials/socials-nav/SocialNav";
 
 //Extract our Sass variables into a JS object
 /* eslint-disable*/
@@ -35,6 +36,7 @@ const Bg = styled.div`
 const Main = styled.main`
   transition: all 0.01s linear;
   width: 100vw;
+  font-family: ${props => props.theme.fontPrimary};
 `;
 
 class App extends Component {
@@ -53,14 +55,15 @@ class App extends Component {
     return (
       <ThemeProvider theme={theme}>
         <React.Fragment>
-          <Bg
-            innerRef={b => (this.back = b)}
+          <Bg innerRef={b => (this.back = b)} />
+          <Main
+            className="main-container"
             onMouseMove={e => this.handleMouseMove(e)}
-          />
-          <Main className="main-container">
+          >
             <Border theme={theme} />
             <LeftNav />
             <FullContainer />
+            <SocialNav />
           </Main>
         </React.Fragment>
       </ThemeProvider>

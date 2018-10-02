@@ -62,10 +62,10 @@ class LeftNav extends Component {
       <Left id="left-nav" className="navbar-sidebar">
         <Logo />
         <ul className="navbar-nav">
-          <Li item={"home"} />
-          <Li item={"about"} />
-          <Li item={"works"} />
-          <Li item={"contact"} />
+          <Li item={"home"} url={"#home"} />
+          <Li item={"about"} url={"#about"} />
+          <Li item={"works"} url={"#works"} />
+          <Li item={"contact"} url={"#contact"} />
         </ul>
       </Left>
     );

@@ -4,7 +4,7 @@ import React from "react";
 const Li = props => {
   return (
     <li className="nav-item" data-menuanchor={props.item}>
-      <a href={`#${props.item}`}>
+      <a href={`${props.url}`}>
         <span className="txt">{props.item}</span>
       </a>
     </li>
