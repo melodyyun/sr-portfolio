@@ -20,7 +20,7 @@ const Bg = styled.div`
   height: 100vh;
   overflow: hidden;
   background-attachment: fixed;
-  transition: all 0.01s linear;
+  transition: all 0.05s linear;
   filter: brightness(0.4);
   z-index: -1;
   position: fixed;

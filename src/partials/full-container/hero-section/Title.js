@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "../../utility/Button";
 
 const MainTitle = styled.div`
   padding-top: 150px;
@@ -41,6 +42,7 @@ const Title = () => {
         </span>
         . >>>>CLICK HERE FOR 20 REASONS YOU HAVE TO WORK WITH ME!!!!!! .
       </p>
+      <Button text={"About"} />
     </MainTitle>
   );
 };
