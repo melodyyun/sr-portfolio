@@ -3,19 +3,44 @@ import styled from "styled-components";
 
 const Btn = styled.a`
   border: 1px solid ${props => props.theme.transparent};
-  padding: 10px 40px;
   transition: ${props => props.theme.transition};
-  margin: 10px 0;
+  padding: 10px 50px 10px 30px;
+  position: relative;
 
   &:hover {
     background: ${props => props.theme.transparent};
+
+    &::before {
+      right: 25px;
+    }
+
+    &::after {
+      right: 25px;
+    }
+  }
+
+  &::before {
+    content: "\f105";
+    color: ${props => props.theme.transparent};
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+    right: 30px;
+    transition: ${props => props.theme.transition};
+    position: absolute;
   }
 
   &::after {
     content: "\f105";
+    color: ${props => props.theme.transparent};
     display: inline-block;
     font-family: "Font Awesome 5 Free";
-    font-weight: 400;
+    font-weight: 900;
+    font-size: 20px;
+    right: 20px;
+    transition: ${props => props.theme.transition};
+    position: absolute;
   }
 `;
 

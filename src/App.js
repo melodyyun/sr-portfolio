@@ -24,6 +24,7 @@ const Bg = styled.div`
   filter: brightness(0.4);
   z-index: -1;
   position: fixed;
+
   @media (max-width: 1024px) {
     background: url("./assets/images/constrast-sea.jpg");
     background-size: 110vw 110vh;

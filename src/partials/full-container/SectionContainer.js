@@ -2,13 +2,16 @@ import React from "react";
 import styled from "styled-components";
 
 const SecContainer = styled.div`
-  position: relative;
-  width: calc(100% - 100px);
+  align-items: center;
+  display: flex;
   height: calc(100vh - 100px);
+  justify-content: center;
   left: 50%;
-  transform: translateX(-50%);
-  padding-top: 50px;
   padding-bottom: 50px;
+  padding-top: 50px;
+  position: relative;
+  transform: translateX(-50%);
+  width: calc(100% - 100px);
 `;
 
 const SectionContainer = props => {

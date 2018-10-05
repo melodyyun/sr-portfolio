@@ -3,10 +3,10 @@ import styled from "styled-components";
 import Button from "../../utility/Button";
 
 const MainTitle = styled.div`
-  padding-top: 150px;
-  max-width: 650px;
-  margin-left: 200px;
   color: ${props => props.theme.white};
+  max-width: 650px;
+  position: relative;
+
   &::after {
     content: "";
     display: block;
@@ -17,24 +17,28 @@ const MainTitle = styled.div`
     opacity: 0.2;
     filter: alpha(opacity=20); /* For IE8 and earlier */
     transform: skewY(20deg);
-    top: 190px;
-    left: 250px;
+    top: 10px;
+    left: 40px;
   }
+
   .title {
     font-size: 90px;
     max-width: 200px;
     font-weight: 700;
+    margin: 1rem 1rem 1rem 0;
   }
+
   .sub-heading {
     font-size: 20px;
     font-weight: 500;
+    padding-bottom: 20px;
   }
 `;
 
 const Title = () => {
   return (
     <MainTitle className="title-container">
-      <div className="title">Saad Rahman.</div>
+      <h1 className="title">Saad Rahman.</h1>
       <p className="sub-heading">
         Likes: long walks on black sand beaches, pho, aspens
         <span role="img" aria-label="puppy emoji">

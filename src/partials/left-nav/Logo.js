@@ -7,7 +7,7 @@ const LogoAnchor = styled.a`
   display: block;
   margin: 0 auto;
   &:hover img {
-    box-shadow: 0px 0px 10px #fff;
+    box-shadow: 0px 0px 10px ${props => props.theme.white};
   }
 `;
 

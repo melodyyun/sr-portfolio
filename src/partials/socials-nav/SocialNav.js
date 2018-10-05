@@ -8,13 +8,16 @@ const SocNav = styled.nav`
   display: block;
   top: 50px;
   box-sizing: border-box;
+
   .navbar-social {
     margin: 0;
     padding: 0;
+
     .nav-item {
       list-style: none;
       overflow: hidden;
       transition: all 0.3s ease;
+
       .btn-social {
         color: ${props => props.theme.white};
         padding: 10px;
@@ -28,6 +31,7 @@ const SocNav = styled.nav`
         justify-content: center;
         align-items: center;
       }
+
       &:hover {
         background: rgba(255, 255, 255, 0.15);
       }
