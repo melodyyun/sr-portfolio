@@ -21,6 +21,10 @@ class FullContainer extends React.Component {
           id="about"
           children={<About theme={this.props.about} />}
         />
+        <SectionContainer
+          id="about"
+          children={<About theme={this.props.about} />}
+        />
       </Container>
     );
   }

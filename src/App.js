@@ -13,8 +13,8 @@ const theme = require('sass-extract-loader?{"plugins": ["sass-extract-js"]}!./va
 
 //background styling
 const Bg = styled.div`
-  background: url("./assets/images/black-sand.jpg");
-  background-size: 110vw 110vh;
+  background: url("./assets/images/contrast-sea-horizontal.jpg");
+  background-size: 110vw 150vh;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
@@ -26,8 +26,8 @@ const Bg = styled.div`
   position: fixed;
 
   @media (max-width: 1024px) {
-    background: url("./assets/images/constrast-sea.jpg");
-    background-size: 110vw 110vh;
+    background: url("./assets/images/contrast-sea.jpg");
+    background-size: 110vw 150vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }

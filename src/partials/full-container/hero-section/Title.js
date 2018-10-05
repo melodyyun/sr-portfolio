@@ -21,9 +21,14 @@ const MainTitle = styled.div`
     left: 40px;
   }
 
+  .yellow {
+    color: ${props => props.theme.yellow};
+    display: inline-block;
+    font-weight: 600;
+  }
+
   .title {
     font-size: 90px;
-    max-width: 200px;
     font-weight: 700;
     margin: 1rem 1rem 1rem 0;
   }
@@ -38,13 +43,13 @@ const MainTitle = styled.div`
 const Title = () => {
   return (
     <MainTitle className="title-container">
-      <h1 className="title">Saad Rahman.</h1>
+      <h1 className="title">
+        Saad <br /> Rahman
+        <span className="yellow">.</span>
+      </h1>
       <p className="sub-heading">
-        Likes: long walks on black sand beaches, pho, aspens
-        <span role="img" aria-label="puppy emoji">
-          🐶
-        </span>
-        . >>>>CLICK HERE FOR 20 REASONS YOU HAVE TO WORK WITH ME!!!!!! .
+        Bringing <span className="yellow">unforgettable</span> marketing
+        experiences to life.
       </p>
       <Button text={"About"} />
     </MainTitle>
