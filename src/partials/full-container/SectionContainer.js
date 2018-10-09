@@ -15,6 +15,6 @@ const SecContainer = styled.div`
 `;
 
 const SectionContainer = props => {
-  return <SecContainer>{props.children}</SecContainer>;
+  return <SecContainer id={props.id}>{props.children}</SecContainer>;
 };
 export default SectionContainer;

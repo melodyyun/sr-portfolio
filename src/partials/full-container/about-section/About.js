@@ -81,7 +81,7 @@ const About = () => {
             tenetur temporibus dolores accusantium consequuntur nam dolorem,
             fugiat aliquid.
           </p>
-          <Button text={"Works"} />
+          <Button href="#works" text={"Works"} />
           <i className="fas arrow1 fa-chevron-right" />
           <i className="fas arrow2 fa-chevron-right" />
         </div>

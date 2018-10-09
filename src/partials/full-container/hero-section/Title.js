@@ -51,7 +51,7 @@ const Title = () => {
         Bringing <span className="yellow">unforgettable</span> marketing
         experiences to life.
       </p>
-      <Button text={"About"} />
+      <Button href="#about" text={"About"} />
     </MainTitle>
   );
 };

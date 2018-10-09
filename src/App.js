@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import styled from "styled-components";
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import Border from "./partials/Border";
 import FullContainer from "./partials/full-container/FullContainer";
 import LeftNav from "./partials/left-nav/LeftNav";

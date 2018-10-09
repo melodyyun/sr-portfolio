@@ -7,6 +7,9 @@ import About from "./about-section/About";
 const Container = styled.section`
   width: 100vw;
   position: relative;
+  ${"" /* display: block;
+  scroll-behaviour: smooth;
+  overflow-y: scroll; */};
 `;
 
 class FullContainer extends React.Component {
@@ -16,10 +19,6 @@ class FullContainer extends React.Component {
         <SectionContainer
           id="home"
           children={<Title theme={this.props.title} />}
-        />
-        <SectionContainer
-          id="about"
-          children={<About theme={this.props.about} />}
         />
         <SectionContainer
           id="about"

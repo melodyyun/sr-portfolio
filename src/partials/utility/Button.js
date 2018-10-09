@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
-const Btn = styled.a`
+const Btn = styled.div`
   border: 1px solid ${props => props.theme.transparent};
   transition: ${props => props.theme.transition};
   padding: 10px 50px 10px 30px;
   position: relative;
+  display: inline-block;
 
   &:hover {
     background: ${props => props.theme.transparent};
@@ -42,12 +44,19 @@ const Btn = styled.a`
     transition: ${props => props.theme.transition};
     position: absolute;
   }
+
+  a {
+    color: ${props => props.theme.white};
+    text-decoration: none;
+  }
 `;
 
 const Button = props => {
   return (
-    <Btn href={props.href} className="button">
-      {props.text}
+    <Btn className="buttonContainer">
+      <AnchorLink href={props.href} class="button">
+        {props.text}
+      </AnchorLink>
     </Btn>
   );
 };

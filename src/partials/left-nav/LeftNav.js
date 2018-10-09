@@ -37,6 +37,7 @@ const Left = styled.nav`
         text-decoration: none;
         font-weight: 300;
         letter-spacing: 0.1rem;
+        padding: 15px;
       }
 
       &.active {
