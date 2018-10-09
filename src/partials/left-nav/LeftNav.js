@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
 import Li from "./Li";
+import { link } from "fs";
 
 const Left = styled.nav`
   max-width: 150px;
@@ -43,7 +44,7 @@ const Left = styled.nav`
       &.active {
 
         a {
-          font-weight: 500;
+          font-weight: 600;
           color: ${props => props.theme.white};
         }
       }
@@ -54,7 +55,7 @@ const Left = styled.nav`
 
         a {
           color: ${props => props.theme.white};
-          font-weight: 500;
+          font-weight: 600;
         }
         
         &::after {
@@ -67,15 +68,32 @@ const Left = styled.nav`
 `;
 
 class LeftNav extends Component {
+  handleClick = e => {
+    console.log("clicked", e);
+  };
+
   render() {
+    const links = [
+      { label: "home", href: "#home" },
+      { label: "about", href: "#about" },
+      { label: "works", href: "#works" },
+      { label: "contact", href: "#contact" }
+    ];
+
     return (
       <Left id="left-nav" className="navbar-sidebar">
         <Logo />
         <ul className="navbar-nav">
-          <Li item={"home"} url={"#home"} />
-          <Li item={"about"} url={"#about"} />
-          <Li item={"works"} url={"#works"} />
-          <Li item={"contact"} url={"#contact"} />
+          {links.map((link, i) => {
+            return (
+              <Li
+                item={link.label}
+                url={link.href}
+                key={i}
+                handleClick={this.handleClick}
+              />
+            );
+          })}
         </ul>
       </Left>
     );

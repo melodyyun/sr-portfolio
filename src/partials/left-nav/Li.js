@@ -5,7 +5,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 const Li = props => {
   return (
     <li className="nav-item" data-menuanchor={props.item}>
-      <AnchorLink href={`${props.url}`}>
+      <AnchorLink href={`${props.url}`} onClick={props.handleClick}>
         <span className="txt">{props.item}</span>
       </AnchorLink>
     </li>

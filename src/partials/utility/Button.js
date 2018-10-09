@@ -5,12 +5,12 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 const Btn = styled.div`
   border: 1px solid ${props => props.theme.transparent};
   transition: ${props => props.theme.transition};
-  padding: 10px 50px 10px 30px;
+  padding: 10px 0 10px 0;
   position: relative;
   display: inline-block;
 
   &:hover {
-    background: ${props => props.theme.transparent};
+    background: ${props => props.theme.linearG};
 
     &::before {
       right: 25px;
@@ -48,13 +48,14 @@ const Btn = styled.div`
   a {
     color: ${props => props.theme.white};
     text-decoration: none;
+    padding: 10px 50px 10px 30px;
   }
 `;
 
 const Button = props => {
   return (
     <Btn className="buttonContainer">
-      <AnchorLink href={props.href} class="button">
+      <AnchorLink href={props.href} className="button">
         {props.text}
       </AnchorLink>
     </Btn>
