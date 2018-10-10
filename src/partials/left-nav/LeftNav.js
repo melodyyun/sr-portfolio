@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
 import Li from "./Li";
-import { link } from "fs";
+import { AppContext } from "../../App";
 
 const Left = styled.nav`
   max-width: 150px;
@@ -68,10 +68,6 @@ const Left = styled.nav`
 `;
 
 class LeftNav extends Component {
-  handleClick = e => {
-    console.log("clicked", e);
-  };
-
   render() {
     const links = [
       { label: "home", href: "#home" },
@@ -80,22 +76,35 @@ class LeftNav extends Component {
       { label: "contact", href: "#contact" }
     ];
 
+    console.log(this.props.activeLink);
     return (
-      <Left id="left-nav" className="navbar-sidebar">
-        <Logo />
-        <ul className="navbar-nav">
-          {links.map((link, i) => {
-            return (
-              <Li
-                item={link.label}
-                url={link.href}
-                key={i}
-                handleClick={this.handleClick}
-              />
-            );
-          })}
-        </ul>
-      </Left>
+      <AppContext.Consumer>
+        {context => (
+          <Left id="left-nav" className="navbar-sidebar">
+            <Logo />
+            <ul className="navbar-nav">
+              {links.map((link, i) => {
+                return link.label === context.state.activeLink ? (
+                  <Li
+                    class="active"
+                    item={link.label}
+                    url={link.href}
+                    key={i}
+                    handleClick={this.handleClick}
+                  />
+                ) : (
+                  <Li
+                    item={link.label}
+                    url={link.href}
+                    key={i}
+                    handleClick={this.handleClick}
+                  />
+                );
+              })}
+            </ul>
+          </Left>
+        )}
+      </AppContext.Consumer>
     );
   }
 }

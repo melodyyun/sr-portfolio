@@ -4,6 +4,7 @@ import SectionContainer from "./SectionContainer";
 import Title from "./hero-section/Title";
 import About from "./about-section/About";
 import Works from "./works-section/Works";
+import Contact from "./contact-section/Contact";
 
 const Container = styled.section`
   width: 100vw;
@@ -25,6 +26,10 @@ class FullContainer extends React.Component {
         <SectionContainer
           id="works"
           children={<Works theme={this.props.works} />}
+        />
+        <SectionContainer
+          id="contact"
+          children={<Contact theme={this.props.works} />}
         />
       </Container>
     );

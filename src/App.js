@@ -39,7 +39,17 @@ const Main = styled.main`
   font-family: ${props => props.theme.fontPrimary};
 `;
 
+// creating context
+export const AppContext = React.createContext();
+
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      activeLink: "home"
+    };
+  }
+
   //referencing callback Ref made with innerRef
   //We needed to to this because a regular callback wouldn't work with styled components
   handleMouseMove = e => {
@@ -51,21 +61,30 @@ class App extends Component {
     background.style.backgroundPosition = `${x}px ${y}px`;
   };
 
+  toggleActiveLink = e => {
+    this.setState({
+      activeLink: e.target.value
+    });
+  };
+
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <React.Fragment>
+        <AppContext.Provider
+          value={{ state: this.state, toggleActiveLink: this.toggleActiveLink }}
+        >
           <Bg innerRef={b => (this.back = b)} />
           <Main
             className="main-container"
+            toggleActiveLink={this.toggleActiveLink}
             onMouseMove={e => this.handleMouseMove(e)}
           >
             <Border theme={theme} />
-            <LeftNav />
+            <LeftNav activeLink={this.state.activeLink} />
             <FullContainer />
             <SocialNav />
           </Main>
-        </React.Fragment>
+        </AppContext.Provider>
       </ThemeProvider>
     );
   }
