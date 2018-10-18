@@ -7,7 +7,7 @@ import Works from "./works-section/Works";
 import Contact from "./contact-section/Contact";
 
 const Container = styled.section`
-  width: 100vw;
+  min-width: 100vw;
   position: relative;
 `;
 
