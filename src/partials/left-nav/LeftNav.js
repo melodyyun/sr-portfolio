@@ -7,7 +7,7 @@ import { AppContext } from "../../App";
 const Left = styled.nav`
   max-width: 150px;
   margin-left: 50px;
-  margin-top: 180px;
+  margin-top: 13%;
   position fixed;
   z-index: 1;
 

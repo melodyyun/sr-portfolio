@@ -19,7 +19,7 @@ const Bg = styled.div`
   height: 100vh;
   overflow: hidden;
   background-attachment: fixed;
-  transition: all 0.05s linear;
+  transition: all 0.05s ease;
   filter: brightness(0.4);
   z-index: -1;
   position: fixed;
@@ -31,6 +31,19 @@ const Bg = styled.div`
     background-attachment: fixed;
   }
 `;
+
+//mouse buddy styling
+// const Buddy = styled.div`
+//   position: absolute;
+//   height: 20px;
+//   width: 20px;
+//   left: 0;
+//   top: 0;
+//   opacity: 0;
+//   border-radius: 50%;
+//   background-color: ${props => props.theme.yellow};
+//   transition: all 0.1s ease;
+// `;
 
 //main styling
 const Main = styled.main`
@@ -53,12 +66,23 @@ class App extends Component {
   //referencing callback Ref made with innerRef
   //We needed to to this because a regular callback wouldn't work with styled components
   handleMouseMove = e => {
-    // mouse move variables
-    let x = (e.pageX * -1) / 20;
-    let y = (e.pageY * -1) / 20;
-    //background innerRef
-    const background = this.back;
-    background.style.backgroundPosition = `${x}px ${y}px`;
+    // desktop size
+    const desktop = 1024;
+
+    if (window.innerWidth > desktop) {
+      // mouse move variables
+      let x = (e.pageX * -1) / 20;
+      let y = (e.pageY * -1) / 20;
+      //background innerRef
+      const background = this.back;
+      background.style.backgroundPosition = `${x}px ${y}px`;
+    }
+
+    // //mousebuddy innerRef
+    // const mbuddy = this.mbuddy;
+    // mbuddy.style.left = `${e.pageX}px`;
+    // mbuddy.style.top = `${e.pageY}px`;
+    // mbuddy.style.opacity = 1;
   };
 
   toggleActiveLink = e => {
@@ -74,6 +98,7 @@ class App extends Component {
           value={{ state: this.state, toggleActiveLink: this.toggleActiveLink }}
         >
           <Bg innerRef={b => (this.back = b)} />
+          {/* <Buddy innerRef={m => (this.mbuddy = m)} /> */}
           <Main
             className="main-container"
             toggleActiveLink={this.toggleActiveLink}
