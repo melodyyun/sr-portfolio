@@ -79,7 +79,7 @@ const Left = styled.nav`
 `;
 
 const Mobile = styled.ul`
-  background-color: ${props => props.theme.white};
+  background-color: rgba(253, 254, 255, 0.95);
   box-sizing: border-box;
   position: fixed;
   width: 100%;
@@ -89,6 +89,8 @@ const Mobile = styled.ul`
   padding-left: 0;
   margin: 0;
   z-index: 1;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   .nav-item {
     list-style: none;
@@ -104,6 +106,13 @@ const Mobile = styled.ul`
       text-decoration: none;
       text-align: center;
       padding: 25px 80px;
+      border: 1px solid ${props => props.theme.black};
+      font-weight: 500;
+      transition: all 0.3s ease;
+      &:hover {
+        background: ${props => props.theme.black};
+        color: ${props => props.theme.white};
+      }
     }
   }
 `;
@@ -115,16 +124,17 @@ class LeftNav extends Component {
       mobileNavOpen: false
     };
   }
+
   handleNavClick = () => {
-    this.setState(
-      {
-        mobileNavOpen: !this.state.mobileNavOpen
-      },
-      function() {
-        if (window.innerWidth < 980 && this.state.mobileNavOpen) {
-        }
-      }
-    );
+    this.setState({
+      mobileNavOpen: !this.state.mobileNavOpen
+    });
+  };
+
+  handleNavClose = () => {
+    this.setState({
+      mobileNavOpen: false
+    });
   };
 
   render() {
@@ -136,13 +146,15 @@ class LeftNav extends Component {
     ];
 
     console.log(this.props.activeLink);
-    console.log(this.state.mobileNavOpen);
     return (
       <AppContext.Consumer>
         {context => (
           <Left id="left-nav" className="navbar-sidebar">
             <Logo />
-            <Hamburger handleNavClick={this.handleNavClick} />
+            <Hamburger
+              handleNavClick={this.handleNavClick}
+              mobileNavOpen={this.state.mobileNavOpen}
+            />
             <ul className="navbar-nav">
               {links.map((link, i) => {
                 return link.label === context.state.activeLink ? (
@@ -173,6 +185,7 @@ class LeftNav extends Component {
                       url={link.href}
                       key={i}
                       handleClick={this.handleClick}
+                      handleNavClose={this.handleNavClose}
                     />
                   ) : (
                     <Li
@@ -180,6 +193,7 @@ class LeftNav extends Component {
                       url={link.href}
                       key={i}
                       handleClick={this.handleClick}
+                      handleNavClose={this.handleNavClose}
                     />
                   );
                 })}

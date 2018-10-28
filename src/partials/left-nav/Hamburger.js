@@ -21,16 +21,19 @@ const BurgerBtn = styled.button`
         transform: rotate(45deg);
         transform-origin: top left;
         margin-left: 5px;
+        background-color: ${props => props.theme.black}
       }
 
       &:nth-of-type(2) {
         opacity 0;
+        background-color: ${props => props.theme.black}
       }
 
       &:nth-of-type(3) {
         transform: rotate(-45deg);
         transform-origin: bottom left;
         margin-left: 5px;
+        background-color: ${props => props.theme.black}
       }
     }
   }
@@ -65,11 +68,19 @@ class Hamburger extends Component {
         onClick={this.props.handleNavClick}
       >
         <span className="menu-icon menu-icon-normal">
-          <span className="bars open">
-            <span className="bar bar1" />
-            <span className="bar bar2" />
-            <span className="bar bar3" />
-          </span>
+          {this.props.mobileNavOpen ? (
+            <span className="bars open">
+              <span className="bar bar1" />
+              <span className="bar bar2" />
+              <span className="bar bar3" />
+            </span>
+          ) : (
+            <span className="bars">
+              <span className="bar bar1" />
+              <span className="bar bar2" />
+              <span className="bar bar3" />
+            </span>
+          )}
         </span>
       </BurgerBtn>
     );

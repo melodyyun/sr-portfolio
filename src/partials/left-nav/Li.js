@@ -9,6 +9,7 @@ const Li = props => {
         href={`${props.url}`}
         onClick={e => props.handleClick}
         value={props.item}
+        onClick={props.handleNavClose}
       >
         <span className="txt">{props.item}</span>
       </AnchorLink>
