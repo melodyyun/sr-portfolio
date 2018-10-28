@@ -5,6 +5,8 @@ const BurgerBtn = styled.button`
   padding: 10px;
   height: 50px;
   width: 50px;
+  background-color: rgba(0,0,0,0);
+  border: none;
 
   @media (min-width: 980px) {
     display: none;
@@ -15,7 +17,8 @@ const BurgerBtn = styled.button`
     .bar{
       &:nth-of-type(1) {
         transform: rotate(45deg);
-          transform-origin: top left;
+        transform-origin: top left;
+        margin-left: 5px;
       }
 
       &:nth-of-type(2) {
@@ -24,7 +27,8 @@ const BurgerBtn = styled.button`
 
       &:nth-of-type(3) {
         transform: rotate(-45deg);
-          transform-origin: bottom left;
+        transform-origin: bottom left;
+        margin-left: 5px;
       }
     }
   }

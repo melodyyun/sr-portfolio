@@ -48,17 +48,26 @@ class SocialNav extends Component {
             <a
               href="https://www.linkedin.com/in/saadrahman123/"
               className="btn-social"
+              target="_blank"
             >
               <i className="fab fa-linkedin-in" />
             </a>
           </li>
           <li className="nav-item">
-            <a href="//twitter/miradontsoa" className="btn-social">
+            <a
+              href="https://twitter.com/thesaad_"
+              className="btn-social"
+              target="_blank"
+            >
               <i className="fab fa-twitter" />
             </a>
           </li>
           <li className="nav-item">
-            <a href="//instagram.com/miradontsoa" className="btn-social">
+            <a
+              href="https://www.instagram.com/meteora_theory/"
+              className="btn-social"
+              target="_blank"
+            >
               <i className="fab fa-instagram" />
             </a>
           </li>

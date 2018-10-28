@@ -29,6 +29,7 @@ const Bg = styled.div`
     background-size: 110vw 150vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
   }
 `;
 

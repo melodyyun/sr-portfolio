@@ -80,6 +80,10 @@ const Left = styled.nav`
 `;
 
 class LeftNav extends Component {
+  handleNavClick = () => {
+    console.log(this);
+  };
+
   render() {
     const links = [
       { label: "home", href: "#home" },
@@ -94,7 +98,7 @@ class LeftNav extends Component {
         {context => (
           <Left id="left-nav" className="navbar-sidebar">
             <Logo />
-            <Hamburger />
+            <Hamburger onClick={this.handleNavClick} />
             <ul className="navbar-nav">
               {links.map((link, i) => {
                 return link.label === context.state.activeLink ? (
