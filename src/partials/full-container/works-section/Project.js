@@ -77,8 +77,10 @@ const ProjectContainer = styled.a`
         width: 3px;
         background-color: ${props => props.theme.white};
         display: inline-block;
-        animation: ${dotdotdot} 1.6s ease-in-out infinite;
         margin-right: 2px;
+        &:hover{
+          animation: ${dotdotdot} 1.6s ease-in-out infinite;
+        }
       }
 
       span:nth-of-type(1){

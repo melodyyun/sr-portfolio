@@ -2,17 +2,29 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
 import Li from "./Li";
+import Hamburger from "./Hamburger";
 import { AppContext } from "../../App";
 
 const Left = styled.nav`
-  max-width: 150px;
   margin-left: 50px;
-  margin-top: 13%;
+  margin-top: 50px;
   position fixed;
   z-index: 1;
+  border: 1px solid ${props => props.theme.transparent};
+
+    @media (min-width: 980px){
+      max-width: 150px;
+      margin-top: 13%;
+      border: none;
+    }
 
   .navbar-nav {
     padding-left: 0;
+    display: none;
+
+     @media (min-width: 980px){
+      display: block;
+    }
 
     .nav-item {
       list-style: none;
@@ -82,6 +94,7 @@ class LeftNav extends Component {
         {context => (
           <Left id="left-nav" className="navbar-sidebar">
             <Logo />
+            <Hamburger />
             <ul className="navbar-nav">
               {links.map((link, i) => {
                 return link.label === context.state.activeLink ? (

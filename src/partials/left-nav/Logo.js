@@ -9,6 +9,10 @@ const LogoAnchor = styled.a`
   &:hover img {
     box-shadow: 0px 0px 10px ${props => props.theme.white};
   }
+
+  @media (max-width: 979px) {
+    display: none;
+  }
 `;
 
 const LogoImg = styled.img`
