@@ -10,7 +10,6 @@ const Left = styled.nav`
   margin-top: 50px;
   position fixed;
   z-index: 1;
-  border: 1px solid ${props => props.theme.transparent};
 
     @media (min-width: 980px){
       max-width: 150px;
@@ -22,7 +21,7 @@ const Left = styled.nav`
     padding-left: 0;
     display: none;
 
-     @media (min-width: 980px){
+    @media (min-width: 980px){
       display: block;
     }
 
@@ -79,9 +78,53 @@ const Left = styled.nav`
   }
 `;
 
+const Mobile = styled.ul`
+  background-color: ${props => props.theme.white};
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0;
+  padding-left: 0;
+  margin: 0;
+  z-index: 1;
+
+  .nav-item {
+    list-style: none;
+    margin-left: 0;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      color: ${props => props.theme.black};
+      text-decoration: none;
+      text-align: center;
+      padding: 25px 80px;
+    }
+  }
+`;
+
 class LeftNav extends Component {
+  constructor() {
+    super();
+    this.state = {
+      mobileNavOpen: false
+    };
+  }
   handleNavClick = () => {
-    console.log(this);
+    this.setState(
+      {
+        mobileNavOpen: !this.state.mobileNavOpen
+      },
+      function() {
+        if (window.innerWidth < 980 && this.state.mobileNavOpen) {
+        }
+      }
+    );
   };
 
   render() {
@@ -93,12 +136,13 @@ class LeftNav extends Component {
     ];
 
     console.log(this.props.activeLink);
+    console.log(this.state.mobileNavOpen);
     return (
       <AppContext.Consumer>
         {context => (
           <Left id="left-nav" className="navbar-sidebar">
             <Logo />
-            <Hamburger onClick={this.handleNavClick} />
+            <Hamburger handleNavClick={this.handleNavClick} />
             <ul className="navbar-nav">
               {links.map((link, i) => {
                 return link.label === context.state.activeLink ? (
@@ -119,6 +163,28 @@ class LeftNav extends Component {
                 );
               })}
             </ul>
+            {this.state.mobileNavOpen ? (
+              <Mobile className="navbar-mobile">
+                {links.map((link, i) => {
+                  return link.label === context.state.activeLink ? (
+                    <Li
+                      class="active"
+                      item={link.label}
+                      url={link.href}
+                      key={i}
+                      handleClick={this.handleClick}
+                    />
+                  ) : (
+                    <Li
+                      item={link.label}
+                      url={link.href}
+                      key={i}
+                      handleClick={this.handleClick}
+                    />
+                  );
+                })}
+              </Mobile>
+            ) : null}
           </Left>
         )}
       </AppContext.Consumer>

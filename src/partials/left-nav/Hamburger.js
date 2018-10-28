@@ -7,6 +7,8 @@ const BurgerBtn = styled.button`
   width: 50px;
   background-color: rgba(0,0,0,0);
   border: none;
+  position: fixed;
+  z-index: 2;
 
   @media (min-width: 980px) {
     display: none;
@@ -57,7 +59,11 @@ const BurgerBtn = styled.button`
 class Hamburger extends Component {
   render() {
     return (
-      <BurgerBtn className="navbar-toggler site-menu-icon" id="navMenuIcon">
+      <BurgerBtn
+        className="navbar-toggler site-menu-icon"
+        id="navMenuIcon"
+        onClick={this.props.handleNavClick}
+      >
         <span className="menu-icon menu-icon-normal">
           <span className="bars open">
             <span className="bar bar1" />
