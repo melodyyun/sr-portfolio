@@ -77,6 +77,9 @@ class App extends Component {
       //background innerRef
       const background = this.back;
       background.style.backgroundPosition = `${x}px ${y}px`;
+    } else {
+      const background = this.back;
+      background.style.backgroundPosition = `0px 0px`;
     }
 
     // //mousebuddy innerRef
