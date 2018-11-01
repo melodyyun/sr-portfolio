@@ -9,6 +9,7 @@ const BurgerBtn = styled.button`
   border: none;
   position: fixed;
   z-index: 2;
+  
 
   @media (min-width: 980px) {
     display: none;

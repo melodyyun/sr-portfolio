@@ -8,9 +8,19 @@ const AboutContainer = styled.div`
   position: relative;
   top: -80px;
 
+  @media (max-width: 840px) {
+    top: 0;
+    max-width: 450px;
+  }
+
   img {
     height: 300px;
     box-shadow: ${props => props.theme.boxShadow};
+
+    @media (max-width: 840px) {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .about-text {
@@ -24,6 +34,14 @@ const AboutContainer = styled.div`
     padding: 10px 30px;
     top: 250px;
     right: -50px;
+
+    @media (max-width: 840px) {
+      display: block;
+      right: 0;
+      margin-left: 0;
+      position: relative;
+      top: 0;
+    }
 
     h2 {
       margin: 0;
@@ -43,6 +61,10 @@ const AboutContainer = styled.div`
       position: absolute;
       left: -20px;
       border-right: none;
+
+      @media (max-width: 840px) {
+        display: none;
+      }
     }
 
     .arrow1 {
@@ -52,6 +74,9 @@ const AboutContainer = styled.div`
       position: absolute;
       right: -40px;
       bottom: 30px;
+      @media (max-width: 980px) {
+        display: none;
+      }
     }
 
     .arrow2 {
@@ -61,6 +86,9 @@ const AboutContainer = styled.div`
       position: absolute;
       right: -80px;
       bottom: 30px;
+      @media (max-width: 980px) {
+        display: none;
+      }
     }
   }
 `;

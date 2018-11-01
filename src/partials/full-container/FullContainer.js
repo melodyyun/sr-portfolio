@@ -9,6 +9,10 @@ import Contact from "./contact-section/Contact";
 const Container = styled.section`
   min-width: 100vw;
   position: relative;
+
+  @media (max-width: 840px) {
+    min-width: 100%;
+  }
 `;
 
 class FullContainer extends React.Component {

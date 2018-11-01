@@ -7,6 +7,14 @@ const MainTitle = styled.div`
   max-width: 650px;
   position: relative;
 
+  @media (max-width: 840px) {
+    max-width: 450px;
+  }
+
+  @media (max-width: 600px) {
+    max-width: calc(100% - 40px);
+  }
+
   &::after {
     content: "";
     display: block;
@@ -19,6 +27,13 @@ const MainTitle = styled.div`
     transform: skewY(20deg);
     top: 10px;
     left: 40px;
+
+    @media (max-width: 840px) {
+      height: 120px;
+      width: 150px;
+      top: 22px;
+      left: 20px;
+    }
   }
 
   .yellow {
@@ -31,12 +46,25 @@ const MainTitle = styled.div`
     font-size: 90px;
     font-weight: 700;
     margin: 1rem 1rem 1rem 0;
+
+    @media (max-width: 840px) {
+      font-size: 55px;
+    }
+
+    @media (max-width: 360px) {
+      font-size: 40px;
+    }
   }
 
   .sub-heading {
     font-size: 20px;
     font-weight: 500;
     padding-bottom: 20px;
+
+    @media (max-width: 840px) {
+      font-size: 18px;
+      padding-bottom: 10px;
+    }
   }
 `;
 

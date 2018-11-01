@@ -9,9 +9,23 @@ const SocNav = styled.nav`
   top: 50px;
   box-sizing: border-box;
 
+  @media (max-width: 980px) {
+    top: 40px;
+    right: 40px;
+  }
+
+  @media (max-width: 680px) {
+    top: 20px;
+    right: 20px;
+  }
+
   .navbar-social {
     margin: 0;
     padding: 0;
+
+    @media (max-width: 600px) {
+      display: flex;
+    }
 
     .nav-item {
       list-style: none;

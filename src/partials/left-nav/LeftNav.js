@@ -11,6 +11,16 @@ const Left = styled.nav`
   position fixed;
   z-index: 1;
 
+    @media (max-width: 980px){
+      margin-left: 40px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 680px){
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+
     @media (min-width: 980px){
       max-width: 150px;
       margin-top: 13%;

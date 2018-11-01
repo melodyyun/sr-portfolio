@@ -13,6 +13,11 @@ const BorderLight = styled.div`
   background: transparent;
   pointer-events: none;
   transition: all 0.3s ease;
+  @media (max-width: 980px) {
+    top: 20px
+    width: calc(100% - 40px);
+    height: calc(100vh - 40px);
+  }
 `;
 
 const Border = props => {

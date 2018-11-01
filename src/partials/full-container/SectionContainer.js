@@ -12,6 +12,14 @@ const SecContainer = styled.div`
   position: relative;
   transform: translateX(-50%);
   width: calc(100% - 100px);
+
+  @media (max-width: 980px) {
+    padding-top: 20px;
+    height: auto;
+    width: calc(100% - 40px);
+    padding-top: 90px;
+    padding-bottom: 20px;
+  }
 `;
 
 const SectionContainer = props => {

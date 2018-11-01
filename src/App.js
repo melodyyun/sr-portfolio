@@ -26,10 +26,12 @@ const Bg = styled.div`
 
   @media (max-width: 1024px) {
     background: url("./assets/images/contrast-sea.jpg");
-    background-size: 110vw 150vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
   }
 `;
 
