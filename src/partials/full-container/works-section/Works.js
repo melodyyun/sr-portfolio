@@ -46,7 +46,7 @@ class Works extends React.Component {
             <Project />
           </div>
         </div>
-        <Button href="#contact" text={"Contact"} />
+        <Button href="#about" text={"About"} />
       </WorksContainer>
     );
   }

@@ -109,7 +109,7 @@ const About = () => {
             tenetur temporibus dolores accusantium consequuntur nam dolorem,
             fugiat aliquid.
           </p>
-          <Button href="#works" text={"Works"} />
+          <Button href="#contact" text={"Contact"} />
           <i className="fas arrow1 fa-chevron-right" />
           <i className="fas arrow2 fa-chevron-right" />
         </div>

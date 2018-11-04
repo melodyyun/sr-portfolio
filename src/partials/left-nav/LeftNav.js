@@ -149,6 +149,19 @@ class LeftNav extends Component {
     });
   };
 
+  closeMobileNav = () => {
+    const leftNav = this;
+    window.addEventListener("resize", function() {
+      if (window.innerWidth > 1080) {
+        leftNav.handleNavClose();
+      }
+    });
+  };
+
+  componentDidMount() {
+    this.closeMobileNav();
+  }
+
   render() {
     const links = [
       { label: "home", href: "#home" },

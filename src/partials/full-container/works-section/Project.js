@@ -21,17 +21,20 @@ const ProjectContainer = styled.a`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    transition: all 0.6s ease;
-    transition-delay: 0.3s;
+    transition: all 0.3s ease;
+    ${"" /* transition-delay: 0.3s; */}
     border-radius: 0 0 10px 10px;
 
       &:hover{
+        height: 100%;
+        background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0, 1) 80%);
+        justify-content: flex-end;
 
-      .btn-details{
-        span{
-          animation: ${dotdotdot} 1.6s ease-in-out infinite;
+        .btn-details{
+          span{
+            animation: ${dotdotdot} 1.6s ease-in-out infinite;
+          }
         }
-      }
     }
 
     .project-type{
@@ -92,11 +95,9 @@ const ProjectContainer = styled.a`
   img.hover {
     height: 100%;
     border-radius: 10px;
-
-  }
-
-  img.hover < .project-info-container{
-    background: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255, 0.6) 80%);
+    & < .project-info-container{
+      background: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255, 0.6) 80%);
+    }
   }
 `;
 
