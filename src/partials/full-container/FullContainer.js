@@ -21,18 +21,22 @@ class FullContainer extends React.Component {
       <Container>
         <SectionContainer
           id="home"
+          extends="false"
           children={<Title theme={this.props.title} />}
         />
         <SectionContainer
           id="works"
+          extends="true"
           children={<Works theme={this.props.works} />}
         />
         <SectionContainer
           id="about"
+          extends="false"
           children={<About theme={this.props.about} />}
         />
         <SectionContainer
           id="contact"
+          extends="false"
           children={<Contact theme={this.props.works} />}
         />
       </Container>

@@ -25,7 +25,7 @@ const WorksContainer = styled.div`
     .row {
       display: flex;
       @media (max-width: 1200px) {
-        display: block;
+        flex-direction: column;
       }
     }
   }
