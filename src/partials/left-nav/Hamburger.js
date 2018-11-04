@@ -22,19 +22,19 @@ const BurgerBtn = styled.button`
         transform: rotate(45deg);
         transform-origin: top left;
         margin-left: 5px;
-        background-color: ${props => props.theme.black}
+        background-color: ${props => props.theme.white}
       }
 
       &:nth-of-type(2) {
         opacity 0;
-        background-color: ${props => props.theme.black}
+        background-color: ${props => props.theme.white}
       }
 
       &:nth-of-type(3) {
         transform: rotate(-45deg);
         transform-origin: bottom left;
         margin-left: 5px;
-        background-color: ${props => props.theme.black}
+        background-color: ${props => props.theme.white}
       }
     }
   }

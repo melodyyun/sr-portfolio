@@ -15,51 +15,37 @@ const ProjectContainer = styled.a`
     padding: 20px;
     bottom: 0;
     width: 100%;
-    height: 100%;
+    height: 60%;
     box-sizing: border-box;
-    background: linear-gradient(${props =>
-      props.theme.transparent}, #9198e5 80%);
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0, 0.5) 80%);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    transition: all 0.5s ease;
+    justify-content: flex-start;
+    transition: all 0.6s ease;
     transition-delay: 0.3s;
-
-      &::after {
-        content: "";
-        display: block;
-        height: 100%;
-        width: 100%;
-        border: 1px solid rgba(253,254,255,0.2);
-        position: absolute;
-        right: -20px;
-        top: 20px;
-        z-index -1;
-        transition: all 0.7s ease;
-      }
+    border-radius: 0 0 10px 10px;
 
       &:hover{
-        box-shadow: 0px 0px 10px ${props => props.theme.white};
 
-        &::after {
-          content: "";
-          display: block;
-          height: 100%;
-          width: 100%;
-          border: 1px solid rgba(253,254,255,0);
-          position: absolute;
-          right: 0px;
-          top: 0px;
-          z-index -1;
-      }
+      .btn-details{
+        span{
+          animation: ${dotdotdot} 1.6s ease-in-out infinite;
+        }
       }
     }
 
     .project-type{
-      margin-bottom: 0;
+      margin: 0;
+      color: ${props => props.theme.yellow};
     }
 
     .project-name {
+      margin-bottom: 10px;
+    }
+
+    .project-description{
+      margin-top: 0;
+      font-size: 15px;
     }
 
     .btn-details {
@@ -73,14 +59,11 @@ const ProjectContainer = styled.a`
 
       span{
         border-radius 50%;
-        height: 3px;
-        width: 3px;
+        height: 2px;
+        width: 2px;
         background-color: ${props => props.theme.white};
         display: inline-block;
         margin-right: 2px;
-        &:hover{
-          animation: ${dotdotdot} 1.6s ease-in-out infinite;
-        }
       }
 
       span:nth-of-type(1){
@@ -99,20 +82,49 @@ const ProjectContainer = styled.a`
   }
 
   img {
-    height: 100%;
+    height: 40%;
     width: 100%;
     position: absolute;
     z-index: -1;
+    border-radius: 10px 10px 0 0;
+  }
+
+  img.hover {
+    height: 100%;
+    border-radius: 10px;
+
+  }
+
+  img.hover < .project-info-container{
+    background: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255, 0.6) 80%);
   }
 `;
 
 class Project extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      projectHover: false
+    };
+  }
+
+  changeImg = () => {
+    this.setState({ projectHover: !this.state.projectHover });
+  };
+
   render() {
     return (
-      <ProjectContainer href="#">
+      <ProjectContainer
+        href="#"
+        onMouseEnter={this.changeImg}
+        onMouseLeave={this.changeImg}
+      >
         <div className="project-info-container">
           <h4 className="project-type">Marketing</h4>
           <h3 className="project-name">Halloween Tracker</h3>
+          <p className="project-description">
+            UFC yeah cool mannn Lorem ipsum dolor sit amet.
+          </p>
           <div className="btn-details">
             Learn More
             <span />
@@ -120,10 +132,18 @@ class Project extends React.Component {
             <span />
           </div>
         </div>
-        <img
-          src="https://images.unsplash.com/photo-1539683255143-73a6b838b106?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d8d4c6058d4f950bb1fd746a3fec43f7&auto=format&fit=crop&w=632&q=80"
-          alt="tracker"
-        />
+        {this.state.projectHover ? (
+          <img
+            className="hover"
+            src="./assets/images/ufc229Portrait.jpeg"
+            alt="poster for UFC229 Conor vs Khabib"
+          />
+        ) : (
+          <img
+            src="./assets/images/ufc229.jpeg"
+            alt="poster for UFC229 Conor vs Khabib"
+          />
+        )}
       </ProjectContainer>
     );
   }

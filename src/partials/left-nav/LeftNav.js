@@ -89,7 +89,7 @@ const Left = styled.nav`
 `;
 
 const Mobile = styled.ul`
-  background-color: rgba(253, 254, 255, 0.95);
+  ${"" /* background-color: rgba(253, 254, 255, 0.95); */} background-color: rgba(0, 0, 0, 0.95);
   box-sizing: border-box;
   position: fixed;
   width: 100%;
@@ -112,16 +112,18 @@ const Mobile = styled.ul`
     align-items: center;
 
     a {
-      color: ${props => props.theme.black};
+      color: ${props => props.theme.white};
       text-decoration: none;
       text-align: center;
       padding: 25px 80px;
-      border: 1px solid ${props => props.theme.black};
+      width: 100px;
+      border: 1px solid ${props => props.theme.white};
       font-weight: 500;
       transition: all 0.3s ease;
       &:hover {
-        background: ${props => props.theme.black};
-        color: ${props => props.theme.white};
+        background: ${props => props.theme.white};
+        color: ${props => props.theme.black};
+        font-weight: 600;
       }
     }
   }
@@ -150,8 +152,8 @@ class LeftNav extends Component {
   render() {
     const links = [
       { label: "home", href: "#home" },
-      { label: "about", href: "#about" },
       { label: "works", href: "#works" },
+      { label: "about", href: "#about" },
       { label: "contact", href: "#contact" }
     ];
 

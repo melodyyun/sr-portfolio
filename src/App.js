@@ -29,7 +29,7 @@ const Bg = styled.div`
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-position: center !important;
     width: 100%;
     height: 100%;
   }
@@ -71,16 +71,15 @@ class App extends Component {
   handleMouseMove = e => {
     // desktop size
     const desktop = 1024;
+    //background innerRef
+    const background = this.back;
 
     if (window.innerWidth > desktop) {
       // mouse move variables
       let x = (e.pageX * -1) / 20;
       let y = (e.pageY * -1) / 20;
-      //background innerRef
-      const background = this.back;
       background.style.backgroundPosition = `${x}px ${y}px`;
     } else {
-      const background = this.back;
       background.style.backgroundPosition = `0px 0px`;
     }
 

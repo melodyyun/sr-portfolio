@@ -9,19 +9,6 @@ const WorksContainer = styled.div`
   position: relative;
 
   .about-text {
-    h2 {
-      &::after {
-        content: "";
-        display: block;
-        height: 30px;
-        width: 50px;
-        background-color: rgba(253, 254, 255, 0.2);
-        position: absolute;
-        transform: skewY(-20deg);
-        top: 19px;
-        left: 20px;
-      }
-    }
     &::before {
       content: "";
       display: block;
