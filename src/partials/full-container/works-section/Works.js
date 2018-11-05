@@ -8,6 +8,18 @@ const WorksContainer = styled.div`
   color: white;
   position: relative;
 
+  @media (max-width: 1200px) {
+    margin-left: 0;
+    max-width: 536px;
+    width: 100%;
+  }
+
+  @media (max-width: 840px) {
+    width: 100%;
+    max-width: 450px;
+    max-width: auto;
+  }
+
   .about-text {
     &::before {
       content: "";
@@ -18,6 +30,11 @@ const WorksContainer = styled.div`
       position: absolute;
       left: -20px;
       border-right: none;
+    }
+    @media (max-width: 1200px) {
+      &::before {
+        display: none;
+      }
     }
   }
   .project-container {

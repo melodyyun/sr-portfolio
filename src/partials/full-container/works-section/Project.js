@@ -10,6 +10,11 @@ const ProjectContainer = styled.a`
   margin-bottom: 30px;
   color: ${props => props.theme.white};
 
+  @media (max-width: 1200px) {
+    width: 100%;
+    height: auto;
+  }
+
   .project-info-container {
     position: absolute;
     padding: 20px;
@@ -22,8 +27,13 @@ const ProjectContainer = styled.a`
     flex-direction: column;
     justify-content: flex-start;
     transition: all 0.3s ease;
-    ${"" /* transition-delay: 0.3s; */}
     border-radius: 0 0 10px 10px;
+
+    @media (max-width: 1200px) {
+      height: 100%;
+      background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0, 1) 80%);
+      justify-content: flex-end;
+    }
 
       &:hover{
         height: 100%;
@@ -90,6 +100,11 @@ const ProjectContainer = styled.a`
     position: absolute;
     z-index: -1;
     border-radius: 10px 10px 0 0;
+    @media (max-width: 1200px) {
+      height: auto;
+      border-radius: 10px;
+      position: relative;
+    }
   }
 
   img.hover {
