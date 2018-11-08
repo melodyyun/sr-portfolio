@@ -35,18 +35,6 @@ const ProjectContainer = styled.a`
       justify-content: flex-end;
     }
 
-      &:hover{
-        height: 100%;
-        background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0, 1) 80%);
-        justify-content: flex-end;
-
-        .btn-details{
-          span{
-            animation: ${dotdotdot} 1.6s ease-in-out infinite;
-          }
-        }
-    }
-
     .project-type{
       margin: 0;
       color: ${props => props.theme.yellow};
@@ -90,6 +78,20 @@ const ProjectContainer = styled.a`
 
       span:nth-of-type(3){
         animation-delay: -1s;
+      }
+    }
+  }
+
+  &:hover{
+    .project-info-container {
+      height: 100%;
+      background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0, 1) 70%);
+      justify-content: flex-end;
+
+      .btn-details{
+        span{
+          animation: ${dotdotdot} 1.6s ease-in-out infinite;
+        }
       }
     }
   }

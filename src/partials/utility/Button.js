@@ -8,9 +8,10 @@ const Btn = styled.div`
   padding: 10px 0 10px 0;
   position: relative;
   display: inline-block;
+  background: rgba(0, 0, 0, 0.4);
 
   &:hover {
-    background: ${props => props.theme.linearG};
+    background: rgba(0, 0, 0, 0.1);
 
     &::before {
       right: 25px;

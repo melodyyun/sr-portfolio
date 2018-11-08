@@ -47,6 +47,11 @@ const AboutContainer = styled.div`
       margin: 0;
     }
 
+    h4{
+      margin-bottom: 0;
+      color: ${props => props.theme.yellow}
+    }
+
     p {
       padding-bottom: 20px;
       line-height: 1.5rem;
@@ -103,11 +108,12 @@ const About = () => {
         />
         <div className="about-text">
           <h2>Who am I?</h2>
+          <h4>Marketing | Product | Project specialist at your service.</h4>
           <p>
-            I'm Saad I'm a marketing blah blah blah person Lorem ipsum dolor,
-            sit amet consectetur adipisicing elit. Praesentium, amet. Ipsam
-            tenetur temporibus dolores accusantium consequuntur nam dolorem,
-            fugiat aliquid.
+            I'm Saad - part marketer, part tech enthusiast, part dragonboater. Too many parts?
+            I'm a passionate and driven mid-level marketing professional and I want to help your organization bring value to the world.
+            I like to bring exciting product launches to life, develop ways to excite customers through groundbreaking marketing campaigns, and develop rich relationships with clients through meaningful projects.
+            When not working, I love to explore new cities and have been a dragonboater for almost a decade. Actually for hire.
           </p>
           <Button href="#contact" text={"Contact"} />
           <i className="fas arrow1 fa-chevron-right" />

@@ -54,7 +54,7 @@ class Works extends React.Component {
       <WorksContainer>
         <div className="about-text">
           <h2>Works</h2>
-          <p>I makes deez works yoooooooo. Fo realzzz. Hire me.</p>
+          <p>Here's a snapshot of some of my favourite projects I've worked on:</p>
         </div>
         <div className="project-container">
           <div className="row">
