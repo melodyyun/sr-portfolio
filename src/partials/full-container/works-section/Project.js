@@ -31,7 +31,7 @@ const ProjectContainer = styled.a`
 
     @media (max-width: 1200px) {
       height: 100%;
-      background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0, 1) 80%);
+      background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0, 0.8), rgba(0,0,0, 1));
       justify-content: flex-end;
     }
 
@@ -41,7 +41,8 @@ const ProjectContainer = styled.a`
     }
 
     .project-name {
-      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-bottom: 7px;
     }
 
     .project-description{
@@ -88,6 +89,10 @@ const ProjectContainer = styled.a`
       background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0, 1) 70%);
       justify-content: flex-end;
 
+      @media (max-width: 1200px){
+        background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0, 0.8), rgba(0,0,0, 1));
+      }
+
       .btn-details{
         span{
           animation: ${dotdotdot} 1.6s ease-in-out infinite;
@@ -127,7 +132,11 @@ class Project extends React.Component {
   }
 
   changeImg = () => {
-    this.setState({ projectHover: !this.state.projectHover });
+    if (window.innerWidth > 1200) {
+      this.setState({ projectHover: !this.state.projectHover });
+    } else {
+      this.setState({ projectHover: false });
+    }
   };
 
   render() {
@@ -138,11 +147,9 @@ class Project extends React.Component {
         onMouseLeave={this.changeImg}
       >
         <div className="project-info-container">
-          <h4 className="project-type">Marketing</h4>
-          <h3 className="project-name">Halloween Tracker</h3>
-          <p className="project-description">
-            UFC yeah cool mannn Lorem ipsum dolor sit amet.
-          </p>
+          <h4 className="project-type">{this.props.type}</h4>
+          <h3 className="project-name">{this.props.name}</h3>
+          <p className="project-description">{this.props.description}</p>
           <div className="btn-details">
             Learn More
             <span />
@@ -153,14 +160,11 @@ class Project extends React.Component {
         {this.state.projectHover ? (
           <img
             className="hover"
-            src="./assets/images/ufc229Portrait.jpeg"
-            alt="poster for UFC229 Conor vs Khabib"
+            src={this.props.imgHoverSrc}
+            alt={this.props.imgHoverAlt}
           />
         ) : (
-          <img
-            src="./assets/images/ufc229.jpeg"
-            alt="poster for UFC229 Conor vs Khabib"
-          />
+          <img src={this.props.imgSrc} alt={this.props.imgAlt} />
         )}
       </ProjectContainer>
     );

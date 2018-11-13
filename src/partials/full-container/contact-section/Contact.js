@@ -88,7 +88,7 @@ const Contact = () => {
       <label htmlFor="email">Email</label>
       <input type="email" name="email" id="email" placeholder="JasonBourne@CIA.com" />
       <label htmlFor="message">Message</label>
-      <textarea id="message" rows="6" cols="50" name="comments" placeholder="Hey Saad, I'm reaching out to you for a new role we just opened for Lead Dog Guru ..." />
+      <textarea id="message" rows="6" cols="50" name="comments" placeholder="Hello Human ..." />
       <input type="submit" value="Submit" />
     </form>
     <Button href="#home" text={"Back To Top"} />

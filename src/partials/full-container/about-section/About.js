@@ -31,7 +31,7 @@ const AboutContainer = styled.div`
     margin-left: 60px;
     position: absolute;
     background: rgba(0, 0, 0, 0.4);
-    padding: 10px 30px;
+    padding: 10px 30px 20px 30px;
     top: 250px;
     right: -50px;
 
@@ -47,13 +47,12 @@ const AboutContainer = styled.div`
       margin: 0;
     }
 
-    h4{
+    h4 {
       margin-bottom: 0;
-      color: ${props => props.theme.yellow}
+      color: ${props => props.theme.yellow};
     }
 
     p {
-      padding-bottom: 20px;
       line-height: 1.5rem;
     }
 
@@ -110,10 +109,13 @@ const About = () => {
           <h2>Who am I?</h2>
           <h4>Marketing | Product | Project specialist at your service.</h4>
           <p>
-            I'm Saad - part marketer, part tech enthusiast, part dragonboater. Too many parts?
-            I'm a passionate and driven mid-level marketing professional and I want to help your organization bring value to the world.
-            I like to bring exciting product launches to life, develop ways to excite customers through groundbreaking marketing campaigns, and develop rich relationships with clients through meaningful projects.
-            When not working, I love to explore new cities and have been a dragonboater for almost a decade. Actually for hire.
+            I'm Saad, a passionate and driven mid-level marketing professional
+            and I want to help your organization bring value to the world. I
+            like to bring exciting product launches to life, develop ways to
+            excite customers through groundbreaking marketing campaigns, and
+            develop rich relationships with clients through meaningful projects.
+            When not working, I love to explore new cities and have been a
+            dragonboater for almost a decade. Actually for hire.
           </p>
           <Button href="#contact" text={"Contact"} />
           <i className="fas arrow1 fa-chevron-right" />

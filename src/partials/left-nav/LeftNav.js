@@ -89,7 +89,7 @@ const Left = styled.nav`
 `;
 
 const Mobile = styled.ul`
-  ${"" /* background-color: rgba(253, 254, 255, 0.95); */} background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.95);
   box-sizing: border-box;
   position: fixed;
   width: 100%;
