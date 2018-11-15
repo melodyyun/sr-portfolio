@@ -15,6 +15,24 @@ const ProjectContainer = styled.a`
     height: auto;
   }
 
+  &:hover{
+    .project-info-container {
+      height: 100%;
+      background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0, 1) 70%);
+      justify-content: flex-end;
+
+      @media (max-width: 1200px){
+        background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0, 0.8), rgba(0,0,0, 1));
+      }
+
+      .btn-details{
+        span{
+          animation: ${dotdotdot} 1.6s ease-in-out infinite;
+        }
+      }
+    }
+  }
+
   .project-info-container {
     position: absolute;
     padding: 20px;
@@ -79,24 +97,6 @@ const ProjectContainer = styled.a`
 
       span:nth-of-type(3){
         animation-delay: -1s;
-      }
-    }
-  }
-
-  &:hover{
-    .project-info-container {
-      height: 100%;
-      background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0, 1) 70%);
-      justify-content: flex-end;
-
-      @media (max-width: 1200px){
-        background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0, 0.8), rgba(0,0,0, 1));
-      }
-
-      .btn-details{
-        span{
-          animation: ${dotdotdot} 1.6s ease-in-out infinite;
-        }
       }
     }
   }

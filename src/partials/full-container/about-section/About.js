@@ -114,8 +114,6 @@ const About = () => {
             like to bring exciting product launches to life, develop ways to
             excite customers through groundbreaking marketing campaigns, and
             develop rich relationships with clients through meaningful projects.
-            When not working, I love to explore new cities and have been a
-            dragonboater for almost a decade. Actually for hire.
           </p>
           <Button href="#contact" text={"Contact"} />
           <i className="fas arrow1 fa-chevron-right" />
