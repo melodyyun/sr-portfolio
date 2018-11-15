@@ -7,8 +7,9 @@ import Works from "./works-section/Works";
 import Contact from "./contact-section/Contact";
 
 const Container = styled.section`
-  min-width: 100vw;
+  width: 100%;
   position: relative;
+  overflow: hidden;
 
   @media (max-width: 840px) {
     min-width: 100%;

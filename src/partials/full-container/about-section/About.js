@@ -7,6 +7,7 @@ const AboutContainer = styled.div`
   max-width: 650px;
   position: relative;
   top: -80px;
+  transition: all 0.3s linear;
 
   @media (max-width: 840px) {
     top: 0;

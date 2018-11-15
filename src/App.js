@@ -51,7 +51,7 @@ const Bg = styled.div`
 //main styling
 const Main = styled.main`
   transition: all 0.01s linear;
-  width: 100vw;
+  width: 100%;
   font-family: ${props => props.theme.fontPrimary};
 `;
 

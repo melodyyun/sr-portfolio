@@ -18,6 +18,12 @@ const BorderLight = styled.div`
     width: calc(100% - 40px);
     height: calc(100vh - 40px);
   }
+
+  @media (max-width: 400px) {
+    top: 10px
+    width: calc(100% - 20px);
+    height: calc(100vh - 20px);
+  }
 `;
 
 const Border = props => {

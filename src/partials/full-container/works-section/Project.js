@@ -10,9 +10,14 @@ const ProjectContainer = styled.a`
   margin-bottom: 30px;
   color: ${props => props.theme.white};
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1200px) and (min-width: 450px) {
     width: 100%;
     height: auto;
+  }
+
+  @media (max-width: 450px) {
+    margin-right: auto;
+    margin-left: auto;
   }
 
   &:hover{

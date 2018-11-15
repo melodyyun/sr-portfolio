@@ -7,6 +7,7 @@ const WorksContainer = styled.div`
   margin-left: 30px;
   color: white;
   position: relative;
+  transition: all 0.3s linear;
 
   @media (max-width: 1200px) {
     margin-left: 0;
@@ -41,6 +42,7 @@ const WorksContainer = styled.div`
     margin: 40px 0;
     .row {
       display: flex;
+      transition: all 0.3s linear;
       @media (max-width: 1200px) {
         flex-direction: column;
       }

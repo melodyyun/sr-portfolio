@@ -4,10 +4,30 @@ import Button from "../../utility/Button";
 
 const ContactContainer = styled.div`
   color: white;
+  transition: all 0.3s linear;
 
-  h2{
+  @media (max-width: 1200px) {
+    max-width: 536px;
+    width: 100%;
+  }
+
+  @media (max-width: 840px) {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  h2 {
     position: relative;
     margin-bottom: -8px;
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 18px;
+    }
+
     &::before {
       content: "";
       display: block;
@@ -25,7 +45,7 @@ const ContactContainer = styled.div`
     }
   }
 
-  .yellow{
+  .yellow {
     color: ${props => props.theme.yellow};
   }
 
@@ -35,8 +55,20 @@ const ContactContainer = styled.div`
     background: rgba(225, 225, 225, 0.2);
     padding: 50px;
     margin-bottom: 40px;
+    transition: all 0.3s linear;
 
-    label{
+    @media (max-width: 1200px) {
+      max-width: 536px;
+      width: 100%;
+    }
+
+    @media (max-width: 840px) {
+      width: 100%;
+      max-width: 450px;
+      padding: 20px;
+    }
+
+    label {
       display: none;
     }
 
@@ -69,10 +101,10 @@ const ContactContainer = styled.div`
       }
     }
 
-    input[type=submit]{
+    input[type="submit"] {
       cursor: pointer;
 
-      &:hover{
+      &:hover {
         color: ${props => props.theme.yellow};
       }
     }
@@ -80,19 +112,39 @@ const ContactContainer = styled.div`
 `;
 
 const Contact = () => {
-  return <ContactContainer>
-    <h2>Saad<span className="yellow">.</span>Rahman3@gmail<span className="yellow">.</span>com</h2>
-    <form className="form-container" action="http://www.focuspocus.io/magic/10ab80221566b37db7a0b03826b8d76a" method="POST">
-      <label htmlFor="name">Name</label>
-      <input type="name" name="name" placeholder="Jason Bourne" />
-      <label htmlFor="email">Email</label>
-      <input type="email" name="email" id="email" placeholder="JasonBourne@CIA.com" />
-      <label htmlFor="message">Message</label>
-      <textarea id="message" rows="6" cols="50" name="comments" placeholder="Hello Human ..." />
-      <input type="submit" value="Submit" />
-    </form>
-    <Button href="#home" text={"Back To Top"} />
-  </ContactContainer>;
+  return (
+    <ContactContainer>
+      <h2>
+        Saad<span className="yellow">.</span>Rahman3@gmail
+        <span className="yellow">.</span>com
+      </h2>
+      <form
+        className="form-container"
+        action="http://www.focuspocus.io/magic/10ab80221566b37db7a0b03826b8d76a"
+        method="POST"
+      >
+        <label htmlFor="name">Name</label>
+        <input type="name" name="name" placeholder="Jason Bourne" />
+        <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="JasonBourne@CIA.com"
+        />
+        <label htmlFor="message">Message</label>
+        <textarea
+          id="message"
+          rows="6"
+          cols="50"
+          name="comments"
+          placeholder="Hello Human ..."
+        />
+        <input type="submit" value="Submit" />
+      </form>
+      <Button href="#home" text={"Back To Top"} />
+    </ContactContainer>
+  );
 };
 
 export default Contact;

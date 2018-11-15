@@ -6,6 +6,7 @@ const MainTitle = styled.div`
   color: ${props => props.theme.white};
   max-width: 650px;
   position: relative;
+  transition: all 0.3s linear;
 
   @media (max-width: 840px) {
     max-width: 450px;
@@ -27,12 +28,18 @@ const MainTitle = styled.div`
     transform: skewY(20deg);
     top: 10px;
     left: 40px;
+    transition: all 0.3s linear;
 
     @media (max-width: 840px) {
       height: 120px;
       width: 150px;
       top: 22px;
       left: 20px;
+    }
+
+    @media (max-width: 400px) {
+      height: 90px;
+      width: 100px;
     }
   }
 
@@ -46,6 +53,7 @@ const MainTitle = styled.div`
     font-size: 90px;
     font-weight: 700;
     margin: 1rem 1rem 1rem 0;
+    transition: all 0.3s linear;
 
     @media (max-width: 840px) {
       font-size: 55px;

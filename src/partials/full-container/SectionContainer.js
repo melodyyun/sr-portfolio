@@ -13,6 +13,10 @@ const SecContainer = styled.div`
   position: relative;
   transform: translateX(-50%);
   width: calc(100% - 100px);
+
+  @media (max-width: 400px) {
+    width: calc(100% - 50px);
+  }
 `;
 
 const SectionContainer = props => {
