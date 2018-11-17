@@ -13,15 +13,15 @@ $primary: $blue;
 $secondary: $purple;
 
 // Typography
-$fontPrimary: "Montserrat", sans-serif;
-$fontSecondary: "Amatic SC", cursive;
+$fontPrimary: 'Montserrat', sans-serif;
+// $fontSecondary: ;
 
 // Borders
 $border: 1px solid $white;
 $radius: 0.25rem;
 
 // Shadows
-$boxShadow: "0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07)";
+$boxShadow: '0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07)';
 $boxShadowHover: 0 50px 100px rgba(50, 50, 93, 0.1),
   0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
 // Maybe with a .5sec transition

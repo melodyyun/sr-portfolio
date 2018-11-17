@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import styled, { ThemeProvider } from "styled-components";
-import Border from "./partials/Border";
-import FullContainer from "./partials/full-container/FullContainer";
-import LeftNav from "./partials/left-nav/LeftNav";
-import SocialNav from "./partials/socials-nav/SocialNav";
+import React, { Component } from 'react';
+import styled, { ThemeProvider } from 'styled-components';
+import Border from './partials/Border';
+import FullContainer from './partials/full-container/FullContainer';
+import LeftNav from './partials/left-nav/LeftNav';
+import SocialNav from './partials/socials-nav/SocialNav';
 
 //Extract our Sass variables into a JS object
 /* eslint-disable*/
@@ -12,7 +12,7 @@ const theme = require('sass-extract-loader?{"plugins": ["sass-extract-js"]}!./va
 
 //background styling
 const Bg = styled.div`
-  background: url("./assets/images/contrast-sea-horizontal.jpg");
+  background: url('./assets/images/contrast-sea-horizontal.jpg');
   background-size: 110vw 150vh;
   background-repeat: no-repeat;
   width: 100vw;
@@ -25,7 +25,7 @@ const Bg = styled.div`
   position: fixed;
 
   @media (max-width: 1024px) {
-    background: url("./assets/images/contrast-sea.jpg");
+    background: url('./assets/images/contrast-sea.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -62,7 +62,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      activeLink: "home"
+      activeLink: 'home',
     };
   }
 
@@ -76,8 +76,8 @@ class App extends Component {
 
     if (window.innerWidth > desktop) {
       // mouse move variables
-      let x = (e.pageX * -1) / 20;
-      let y = (e.pageY * -1) / 20;
+      let x = e.pageX * -1 / 20;
+      let y = e.pageY * -1 / 20;
       background.style.backgroundPosition = `${x}px ${y}px`;
     } else {
       background.style.backgroundPosition = `0px 0px`;
@@ -92,7 +92,7 @@ class App extends Component {
 
   toggleActiveLink = e => {
     this.setState({
-      activeLink: e.target.value
+      activeLink: e.target.value,
     });
   };
 

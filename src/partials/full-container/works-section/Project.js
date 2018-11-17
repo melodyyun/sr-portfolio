@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { dotdotdot } from "../../utility/animation";
+import React from 'react';
+import styled from 'styled-components';
+import { dotdotdot } from '../../utility/animation';
 
 const ProjectContainer = styled.a`
   height: 350px;
@@ -10,9 +10,16 @@ const ProjectContainer = styled.a`
   margin-bottom: 30px;
   color: ${props => props.theme.white};
 
-  @media (max-width: 1200px) and (min-width: 450px) {
+  @media (max-width: 1200px) and (min-width: 769px) {
     width: 100%;
     height: auto;
+  }
+
+  @media (max-width: 768px) and (min-width: 450px) {
+    height: 450px;
+    width: 350px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   @media (max-width: 450px) {
@@ -107,12 +114,11 @@ const ProjectContainer = styled.a`
   }
 
   img {
-    height: 40%;
     width: 100%;
     position: absolute;
     z-index: -1;
     border-radius: 10px 10px 0 0;
-    @media (max-width: 1200px) {
+    @media (max-width: 1200px) and (min-width: 769px) {
       height: auto;
       border-radius: 10px;
       position: relative;
@@ -132,7 +138,7 @@ class Project extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      projectHover: false
+      projectHover: false,
     };
   }
 

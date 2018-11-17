@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import Button from "../../utility/Button";
-import Project from "./Project";
+import React from 'react';
+import styled from 'styled-components';
+import Button from '../../utility/Button';
+import Project from './Project';
 
 const WorksContainer = styled.div`
   margin-left: 30px;
@@ -23,7 +23,7 @@ const WorksContainer = styled.div`
 
   .about-text {
     &::before {
-      content: "";
+      content: '';
       display: block;
       height: 125px;
       width: 10px;
@@ -32,14 +32,21 @@ const WorksContainer = styled.div`
       left: -20px;
       border-right: none;
     }
+
+    h2 {
+      color: ${props => props.theme.yellow};
+    }
+
     @media (max-width: 1200px) {
       &::before {
         display: none;
       }
     }
   }
+
   .project-container {
     margin: 40px 0;
+
     .row {
       display: flex;
       transition: all 0.3s linear;
@@ -54,33 +61,33 @@ class Works extends React.Component {
   render() {
     const projects = [
       {
-        type: "Marketing",
-        name: "Conor vs Khabib",
+        type: 'Marketing',
+        name: 'Conor vs Khabib',
         description:
-          "UFC229 Ultimate showdown between world champions Conor and Khabib",
-        imgHoverSrc: "./assets/images/ufc229Portrait.jpeg",
-        imgHoverAlt: "Black and white photo of Conor in the ring",
-        imgSrc: "./assets/images/ufc229.jpeg",
-        imgAlt: "Official poster for UFC229 Conor vs Khabib"
+          'UFC229 Ultimate showdown between world champions Conor and Khabib',
+        imgHoverSrc: './assets/images/ufc229Portrait.jpeg',
+        imgHoverAlt: 'Black and white photo of Conor in the ring',
+        imgSrc: './assets/images/ufc229.jpeg',
+        imgAlt: 'Official poster for UFC229 Conor vs Khabib',
       },
       {
-        type: "Project Managment",
-        name: "FlipGive",
-        description: "Where we give flips to people >:D",
-        imgHoverSrc: "./assets/images/ufc229Portrait.jpeg",
-        imgHoverAlt: "Black and white photo of Conor in the ring",
-        imgSrc: "./assets/images/ufc229.jpeg",
-        imgAlt: "Official poster for UFC229 Conor vs Khabib"
+        type: 'Project Managment',
+        name: 'FlipGive',
+        description: 'Where we give flips to people >:D',
+        imgHoverSrc: './assets/images/ufc229Portrait.jpeg',
+        imgHoverAlt: 'Black and white photo of Conor in the ring',
+        imgSrc: './assets/images/ufc229.jpeg',
+        imgAlt: 'Official poster for UFC229 Conor vs Khabib',
       },
       {
-        type: "Analytics",
-        name: "All the Data and stuffzz",
-        description: "Much smarts very data",
-        imgHoverSrc: "./assets/images/ufc229Portrait.jpeg",
-        imgHoverAlt: "Black and white photo of Conor in the ring",
-        imgSrc: "./assets/images/ufc229.jpeg",
-        imgAlt: "Official poster for UFC229 Conor vs Khabib"
-      }
+        type: 'Analytics',
+        name: 'All the Data and stuffzz',
+        description: 'Much smarts very data',
+        imgHoverSrc: './assets/images/ufc229Portrait.jpeg',
+        imgHoverAlt: 'Black and white photo of Conor in the ring',
+        imgSrc: './assets/images/ufc229.jpeg',
+        imgAlt: 'Official poster for UFC229 Conor vs Khabib',
+      },
     ];
     return (
       <WorksContainer>
@@ -108,7 +115,7 @@ class Works extends React.Component {
             })}
           </div>
         </div>
-        <Button href="#about" text={"About"} />
+        <Button href="#about" text={'About'} />
       </WorksContainer>
     );
   }

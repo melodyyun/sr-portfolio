@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import Logo from "./Logo";
-import Li from "./Li";
-import Hamburger from "./Hamburger";
-import { AppContext } from "../../App";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import Logo from './Logo';
+import Li from './Li';
+import Hamburger from './Hamburger';
+import { AppContext } from '../../App';
 
 const Left = styled.nav`
   margin-left: 50px;
@@ -19,6 +19,11 @@ const Left = styled.nav`
     @media (max-width: 680px){
       margin-left: 20px;
       margin-top: 20px;
+    }
+
+    @media (max-width: 400px) {
+      margin-left: 10px;
+      margin-top: 10px;
     }
 
     @media (min-width: 980px){
@@ -133,25 +138,25 @@ class LeftNav extends Component {
   constructor() {
     super();
     this.state = {
-      mobileNavOpen: false
+      mobileNavOpen: false,
     };
   }
 
   handleNavClick = () => {
     this.setState({
-      mobileNavOpen: !this.state.mobileNavOpen
+      mobileNavOpen: !this.state.mobileNavOpen,
     });
   };
 
   handleNavClose = () => {
     this.setState({
-      mobileNavOpen: false
+      mobileNavOpen: false,
     });
   };
 
   closeMobileNav = () => {
     const leftNav = this;
-    window.addEventListener("resize", function() {
+    window.addEventListener('resize', function() {
       if (window.innerWidth > 1080) {
         leftNav.handleNavClose();
       }
@@ -164,10 +169,10 @@ class LeftNav extends Component {
 
   render() {
     const links = [
-      { label: "home", href: "#home" },
-      { label: "works", href: "#works" },
-      { label: "about", href: "#about" },
-      { label: "contact", href: "#contact" }
+      { label: 'home', href: '#home' },
+      { label: 'works', href: '#works' },
+      { label: 'about', href: '#about' },
+      { label: 'contact', href: '#contact' },
     ];
 
     console.log(this.props.activeLink);

@@ -1,5 +1,22 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+
+const BtnContainer = styled.div`
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  z-index: 2;
+
+  @media (max-width: 600px) {
+    width: calc(100% - 60px);
+    background: linear-gradient(#000, rgba(0, 0, 0, 0));
+  }
+
+  @media (max-width: 400px) {
+    width: calc(100% - 40px);
+  }
+`;
 
 const BurgerBtn = styled.button`
   padding: 10px;
@@ -7,15 +24,14 @@ const BurgerBtn = styled.button`
   width: 50px;
   background-color: rgba(0,0,0,0);
   border: none;
-  position: fixed;
+  position: relative;
   z-index: 2;
   
-
   @media (min-width: 980px) {
     display: none;
   }
 
-  ${"" /* opened nav X */}
+  ${'' /* opened nav X */}
   .bars.open{
     .bar{
       &:nth-of-type(1) {
@@ -39,7 +55,7 @@ const BurgerBtn = styled.button`
     }
   }
 
-  ${"" /* closed nav hamburger */}
+  ${'' /* closed nav hamburger */}
   .bars {
     width: 30px;
     height: 30px;
@@ -63,27 +79,29 @@ const BurgerBtn = styled.button`
 class Hamburger extends Component {
   render() {
     return (
-      <BurgerBtn
-        className="navbar-toggler site-menu-icon"
-        id="navMenuIcon"
-        onClick={this.props.handleNavClick}
-      >
-        <span className="menu-icon menu-icon-normal">
-          {this.props.mobileNavOpen ? (
-            <span className="bars open">
-              <span className="bar bar1" />
-              <span className="bar bar2" />
-              <span className="bar bar3" />
-            </span>
-          ) : (
-            <span className="bars">
-              <span className="bar bar1" />
-              <span className="bar bar2" />
-              <span className="bar bar3" />
-            </span>
-          )}
-        </span>
-      </BurgerBtn>
+      <BtnContainer>
+        <BurgerBtn
+          className="navbar-toggler site-menu-icon"
+          id="navMenuIcon"
+          onClick={this.props.handleNavClick}
+        >
+          <span className="menu-icon menu-icon-normal">
+            {this.props.mobileNavOpen ? (
+              <span className="bars open">
+                <span className="bar bar1" />
+                <span className="bar bar2" />
+                <span className="bar bar3" />
+              </span>
+            ) : (
+              <span className="bars">
+                <span className="bar bar1" />
+                <span className="bar bar2" />
+                <span className="bar bar3" />
+              </span>
+            )}
+          </span>
+        </BurgerBtn>
+      </BtnContainer>
     );
   }
 }

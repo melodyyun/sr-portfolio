@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
 const SocNav = styled.nav`
   position: fixed;
@@ -63,6 +63,7 @@ class SocialNav extends Component {
               href="https://www.linkedin.com/in/saadrahman123/"
               className="btn-social"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fab fa-linkedin-in" />
             </a>
@@ -72,6 +73,7 @@ class SocialNav extends Component {
               href="https://twitter.com/thesaad_"
               className="btn-social"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fab fa-twitter" />
             </a>
@@ -81,6 +83,7 @@ class SocialNav extends Component {
               href="https://www.instagram.com/meteora_theory/"
               className="btn-social"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fab fa-instagram" />
             </a>
