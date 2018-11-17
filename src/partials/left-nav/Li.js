@@ -1,12 +1,18 @@
 import React from "react";
 // import styled from "styled-components";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Li = props => {
   return (
     <li className="nav-item" data-menuanchor={props.item}>
-      <a href={`${props.url}`}>
+      <AnchorLink
+        href={`${props.url}`}
+        onClick={e => props.handleClick}
+        value={props.item}
+        onClick={props.handleNavClose}
+      >
         <span className="txt">{props.item}</span>
-      </a>
+      </AnchorLink>
     </li>
   );
 };
