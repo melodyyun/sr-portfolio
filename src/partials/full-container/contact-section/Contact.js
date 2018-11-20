@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import Button from '../../utility/Button';
+import React from "react";
+import styled from "styled-components";
+import Button from "../../utility/Button";
 
 const ContactContainer = styled.div`
   color: white;
@@ -29,7 +29,7 @@ const ContactContainer = styled.div`
     }
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       height: 180px;
       width: 10px;
@@ -101,7 +101,7 @@ const ContactContainer = styled.div`
       }
     }
 
-    input[type='submit'] {
+    input[type="submit"] {
       cursor: pointer;
 
       &:hover {
@@ -142,7 +142,7 @@ const Contact = () => {
         />
         <input type="submit" value="Submit" />
       </form>
-      <Button href="#home" text={'Back To Top'} />
+      <Button href="#home" text={"Back To Top"} />
     </ContactContainer>
   );
 };

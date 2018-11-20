@@ -1,8 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import { dotdotdot } from '../../utility/animation';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { dotdotdot } from "../../utility/animation";
 
-const ProjectContainer = styled.a`
+const ProjectContainer = styled.div`
   height: 350px;
   width: 250px;
   position: relative;
@@ -138,7 +139,7 @@ class Project extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      projectHover: false,
+      projectHover: false
     };
   }
 
@@ -152,33 +153,33 @@ class Project extends React.Component {
 
   render() {
     return (
-      <ProjectContainer
-        Link
-        to={`/projects/${this.props.name}`}
-        onMouseEnter={this.changeImg}
-        onMouseLeave={this.changeImg}
-      >
-        <div className="project-info-container">
-          <h4 className="project-type">{this.props.type}</h4>
-          <h3 className="project-name">{this.props.name}</h3>
-          <p className="project-description">{this.props.description}</p>
-          <div className="btn-details">
-            Learn More
-            <span />
-            <span />
-            <span />
+      <Link to={`/projects/${this.props.link}`}>
+        <ProjectContainer
+          onMouseEnter={this.changeImg}
+          onMouseLeave={this.changeImg}
+        >
+          <div className="project-info-container">
+            <h4 className="project-type">{this.props.type}</h4>
+            <h3 className="project-name">{this.props.name}</h3>
+            <p className="project-description">{this.props.description}</p>
+            <div className="btn-details">
+              Learn More
+              <span />
+              <span />
+              <span />
+            </div>
           </div>
-        </div>
-        {this.state.projectHover ? (
-          <img
-            className="hover"
-            src={this.props.imgHoverSrc}
-            alt={this.props.imgHoverAlt}
-          />
-        ) : (
-          <img src={this.props.imgSrc} alt={this.props.imgAlt} />
-        )}
-      </ProjectContainer>
+          {this.state.projectHover ? (
+            <img
+              className="hover"
+              src={this.props.imgHoverSrc}
+              alt={this.props.imgHoverAlt}
+            />
+          ) : (
+            <img src={this.props.imgSrc} alt={this.props.imgAlt} />
+          )}
+        </ProjectContainer>
+      </Link>
     );
   }
 }

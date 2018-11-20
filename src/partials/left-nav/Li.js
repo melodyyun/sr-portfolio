@@ -7,7 +7,6 @@ const Li = props => {
     <li className="nav-item" data-menuanchor={props.item}>
       <AnchorLink
         href={`${props.url}`}
-        onClick={e => props.handleClick}
         value={props.item}
         onClick={props.handleNavClose}
       >

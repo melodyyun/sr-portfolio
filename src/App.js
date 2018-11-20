@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import styled, { ThemeProvider } from 'styled-components';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Border from './partials/Border';
-import FullContainer from './partials/full-container/FullContainer';
-import LeftNav from './partials/left-nav/LeftNav';
-import SocialNav from './partials/socials-nav/SocialNav';
-import ProjectPage from './partials/project-pages/ProjectPages';
+import React, { Component } from "react";
+import styled, { ThemeProvider } from "styled-components";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Border from "./partials/Border";
+import FullContainer from "./partials/full-container/FullContainer";
+import LeftNav from "./partials/left-nav/LeftNav";
+import SocialNav from "./partials/socials-nav/SocialNav";
+import ProjectPage from "./partials/project-pages/ProjectPages";
 
 //Extract our Sass variables into a JS object
 /* eslint-disable*/
@@ -13,8 +13,10 @@ const theme = require('sass-extract-loader?{"plugins": ["sass-extract-js"]}!./va
 /* eslint-enable*/
 
 //background styling
+// once hosted bg must be change to absolute links
 const Bg = styled.div`
-  background: url('./assets/images/contrast-sea-horizontal.jpg');
+  background: url("./assets/images/contrast-sea-horizontal.jpg");
+  background-color: black;
   background-size: 110vw 150vh;
   background-repeat: no-repeat;
   width: 100vw;
@@ -27,7 +29,7 @@ const Bg = styled.div`
   position: fixed;
 
   @media (max-width: 1024px) {
-    background: url('./assets/images/contrast-sea.jpg');
+    background: url("./assets/images/contrast-sea.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -51,7 +53,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      activeLink: 'home',
+      activeLink: "home"
     };
   }
 
@@ -65,8 +67,8 @@ class App extends Component {
 
     if (window.innerWidth > desktop) {
       // mouse move variables
-      let x = e.pageX * -1 / 20;
-      let y = e.pageY * -1 / 20;
+      let x = (e.pageX * -1) / 20;
+      let y = (e.pageY * -1) / 20;
       background.style.backgroundPosition = `${x}px ${y}px`;
     } else {
       background.style.backgroundPosition = `0px 0px`;
@@ -75,7 +77,7 @@ class App extends Component {
 
   toggleActiveLink = e => {
     this.setState({
-      activeLink: e.target.value,
+      activeLink: e.target.value
     });
   };
 
@@ -100,16 +102,14 @@ class App extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <AppContext.Provider
-          value={{ state: this.state, toggleActiveLink: this.toggleActiveLink }}
-        >
-          <Router>
-            <React.Fragment>
+        <Router>
+          <React.Fragment>
+            <Switch>
               <Route exact path="/" component={this.homePage} />
               <Route path="/projects" component={ProjectPage} />
-            </React.Fragment>
-          </Router>
-        </AppContext.Provider>
+            </Switch>
+          </React.Fragment>
+        </Router>
       </ThemeProvider>
     );
   }
