@@ -85,7 +85,6 @@ class Home extends Component {
         >
           <Border />
           <LeftNav activeLink={this.state.activeLink} />
-          {/* {React.cloneElement(this.props.children, this.props)} */}
           <FullContainer />
           <SocialNav />
         </Main>

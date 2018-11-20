@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { ThemeProvider } from "styled-components";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./partials/Home";
 import ProjectPage from "./partials/project-pages/ProjectPages";
+import ThankYou from "./partials/ThankYou";
+import NoMatch from "./partials/NoMatch";
 
 //Extract our Sass variables into a JS object
 /* eslint-disable*/
@@ -17,10 +19,12 @@ class App extends Component {
     return (
       <BrowserRouter>
         <ThemeProvider theme={theme}>
-          <React.Fragment>
+          <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/project/:projectId" component={ProjectPage} />
-          </React.Fragment>
+            <Route path="/thank-you" component={ThankYou} />
+            <Route component={NoMatch} />
+          </Switch>
         </ThemeProvider>
       </BrowserRouter>
     );

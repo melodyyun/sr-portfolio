@@ -1,14 +1,18 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import Button from "../utility/Button";
 
-const ProjectMain = styled.div``;
+const ProjectContainer = styled.div``;
 
 class ProjectPage extends Component {
   render() {
     return (
-      <ProjectMain>
+      <ProjectContainer>
         <h1>Project page</h1>
-      </ProjectMain>
+        <Link to={`/`}>Home</Link>
+        <Button href="/" text={"Back"} />
+      </ProjectContainer>
     );
   }
 }
