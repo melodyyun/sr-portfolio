@@ -153,7 +153,8 @@ class Project extends React.Component {
   render() {
     return (
       <ProjectContainer
-        href="#"
+        Link
+        to={`/projects/${this.props.name}`}
         onMouseEnter={this.changeImg}
         onMouseLeave={this.changeImg}
       >

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Border from './partials/Border';
 import FullContainer from './partials/full-container/FullContainer';
 import LeftNav from './partials/left-nav/LeftNav';
 import SocialNav from './partials/socials-nav/SocialNav';
+import ProjectPage from './partials/project-pages/ProjectPages';
 
 //Extract our Sass variables into a JS object
 /* eslint-disable*/
@@ -34,19 +36,6 @@ const Bg = styled.div`
     height: 100%;
   }
 `;
-
-//mouse buddy styling
-// const Buddy = styled.div`
-//   position: absolute;
-//   height: 20px;
-//   width: 20px;
-//   left: 0;
-//   top: 0;
-//   opacity: 0;
-//   border-radius: 50%;
-//   background-color: ${props => props.theme.yellow};
-//   transition: all 0.1s ease;
-// `;
 
 //main styling
 const Main = styled.main`
@@ -82,12 +71,6 @@ class App extends Component {
     } else {
       background.style.backgroundPosition = `0px 0px`;
     }
-
-    // //mousebuddy innerRef
-    // const mbuddy = this.mbuddy;
-    // mbuddy.style.left = `${e.pageX}px`;
-    // mbuddy.style.top = `${e.pageY}px`;
-    // mbuddy.style.opacity = 1;
   };
 
   toggleActiveLink = e => {
@@ -96,24 +79,36 @@ class App extends Component {
     });
   };
 
+  homePage = () => {
+    return (
+      <React.Fragment>
+        <Bg innerRef={b => (this.back = b)} />
+        <Main
+          className="main-container"
+          toggleActiveLink={this.toggleActiveLink}
+          onMouseMove={e => this.handleMouseMove(e)}
+        >
+          <Border theme={theme} />
+          <LeftNav activeLink={this.state.activeLink} />
+          <FullContainer />
+          <SocialNav />
+        </Main>
+      </React.Fragment>
+    );
+  };
+
   render() {
     return (
       <ThemeProvider theme={theme}>
         <AppContext.Provider
           value={{ state: this.state, toggleActiveLink: this.toggleActiveLink }}
         >
-          <Bg innerRef={b => (this.back = b)} />
-          {/* <Buddy innerRef={m => (this.mbuddy = m)} /> */}
-          <Main
-            className="main-container"
-            toggleActiveLink={this.toggleActiveLink}
-            onMouseMove={e => this.handleMouseMove(e)}
-          >
-            <Border theme={theme} />
-            <LeftNav activeLink={this.state.activeLink} />
-            <FullContainer />
-            <SocialNav />
-          </Main>
+          <Router>
+            <React.Fragment>
+              <Route exact path="/" component={this.homePage} />
+              <Route path="/projects" component={ProjectPage} />
+            </React.Fragment>
+          </Router>
         </AppContext.Provider>
       </ThemeProvider>
     );
