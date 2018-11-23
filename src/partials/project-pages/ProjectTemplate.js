@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const TemplateContainer = styled.section`
   .project-section {
@@ -116,6 +117,10 @@ const Template = props => {
           alt={props.project.imgMainAlt}
         />
       </div>
+      <Link to={`/`}>Home</Link>
+      <Link to={`/projects/${props.project.nextLink}`}>
+        {props.project.nextProject}
+      </Link>
     </TemplateContainer>
   );
 };

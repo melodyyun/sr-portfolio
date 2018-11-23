@@ -62,14 +62,14 @@ class Works extends React.Component {
     const projects = [
       {
         type: "Marketing",
-        name: "Conor vs Khabib",
-        link: "conor-vs-khabib",
+        name: "Khabib vs McGregor",
+        link: "khabib-vs-mcgregor",
         description:
-          "UFC229 Ultimate showdown between world champions Conor and Khabib",
+          "UFC229 Ultimate showdown between world champions Khabib vs McGregor",
         imgHoverSrc: "./assets/images/ufc229Portrait.jpeg",
-        imgHoverAlt: "Black and white photo of Conor in the ring",
+        imgHoverAlt: "Black and white photo of Conor McGregor in the ring",
         imgSrc: "./assets/images/ufc229.jpeg",
-        imgAlt: "Official poster for UFC229 Conor vs Khabib"
+        imgAlt: "Official poster for UFC229 Khabib vs McGregor"
       },
       {
         type: "Project Managment",

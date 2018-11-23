@@ -20,9 +20,9 @@ class App extends Component {
         <ThemeProvider theme={theme}>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/projects/conor-vs-khabib" component={UfcPage} />
+            <Route path="/projects/khabib-vs-mcgregor" component={UfcPage} />
             <Route path="/projects/flipgive" component={FlipGivePage} />
-            <Route path="/projects/link" component={ProjectPage} />
+            <Route path="/projects/entertainment" component={ProjectPage} />
             <Route path="/thank-you" component={ThankYou} />
             <Route component={NoMatch} />
           </Switch>
