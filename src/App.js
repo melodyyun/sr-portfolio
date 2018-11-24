@@ -16,7 +16,7 @@ const theme = require('sass-extract-loader?{"plugins": ["sass-extract-js"]}!./va
 class App extends Component {
   render() {
     return (
-      <BrowserRouter basename="/saad"/>
+      <BrowserRouter>
         <ThemeProvider theme={theme}>
           <Switch>
             <Route exact path="/" component={Home} />
