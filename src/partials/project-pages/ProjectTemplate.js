@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import P from "../utility/paragraph";
 
 const TemplateContainer = styled.section`
   .project-section {
@@ -64,6 +65,7 @@ const TemplateContainer = styled.section`
 
       .blocktext {
         padding: 20px;
+        width: 50%;
       }
     }
   }
@@ -85,13 +87,54 @@ const TemplateContainer = styled.section`
       background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0) 0%,
-        rgba(255, 255, 255, 1) 100%
+        rgba(255, 255, 255, 1) 85%
       );
     }
 
     .background {
       width: 100%;
     }
+  }
+
+  .link {
+    position: fixed;
+    padding: 20px;
+    color: ${props => props.theme.yellow};
+    font-size: 30px;
+    text-decoration: none;
+    background: ${props => props.theme.blue};
+    z-index: 3;
+    box-shadow: ${props => props.theme.boxShadow};
+
+    &:hover {
+      box-shadow: ${props => props.theme.boxShadowHover};
+    }
+
+    span {
+      position relative;
+
+      .fa-chevron-left{
+        &:nth-of-type(2){
+          margin-right: 5px;
+        }
+      }
+
+      .fa-chevron-right{
+        &:nth-of-type(1){
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  .link-home {
+    left: 0;
+    top: 70%;
+  }
+
+  .link-next {
+    right: 0;
+    top: 70%;
   }
 `;
 
@@ -102,12 +145,20 @@ const Template = props => {
         <h1>{props.project.name}</h1>
         <h2 className="quote">
           <span className="em qStart">“</span>
-          {props.project.quote}
+          <i>{props.project.quote} </i>
           <span className="em">”</span>
         </h2>
         <div className="row">
-          <p className="blocktext">{props.project.textblock1}</p>
-          <p className="blocktext">{props.project.textblock2}</p>
+          <div className="blocktext">
+            {props.project.textblock1.map((paragraph, i) => {
+              return <P id={i} text={paragraph} />;
+            })}
+          </div>
+          <div className="blocktext">
+            {props.project.textblock2.map((paragraph, i) => {
+              return <P id={i} text={paragraph} />;
+            })}
+          </div>
         </div>
       </div>
       <div className="image-container">
@@ -117,9 +168,22 @@ const Template = props => {
           alt={props.project.imgMainAlt}
         />
       </div>
-      <Link to={`/`}>Home</Link>
-      <Link to={`/projects/${props.project.nextLink}`}>
-        {props.project.nextProject}
+      <Link to={`/`} className="link link-home">
+        <span>
+          <i class="fas arrow1 fa-chevron-left" />
+          <i class="fas arrow1 fa-chevron-left" />
+          Home
+        </span>
+      </Link>
+      <Link
+        to={`/projects/${props.project.nextLink}`}
+        className="link link-next"
+      >
+        <span>
+          {props.project.nextProject}
+          <i class="fas arrow1 fa-chevron-right" />
+          <i class="fas arrow1 fa-chevron-right" />
+        </span>
       </Link>
     </TemplateContainer>
   );

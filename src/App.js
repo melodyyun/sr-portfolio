@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./partials/Home";
-import ProjectPage from "./partials/project-pages/ProjectPages";
+import ProductPage from "./partials/project-pages/ProductPages";
 import UfcPage from "./partials/project-pages/UfcPage";
 import FlipGivePage from "./partials/project-pages/FlipGivePage";
 import ThankYou from "./partials/ThankYou";
@@ -16,13 +16,13 @@ const theme = require('sass-extract-loader?{"plugins": ["sass-extract-js"]}!./va
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/saad"/>
         <ThemeProvider theme={theme}>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/projects/khabib-vs-mcgregor" component={UfcPage} />
             <Route path="/projects/flipgive" component={FlipGivePage} />
-            <Route path="/projects/entertainment" component={ProjectPage} />
+            <Route path="/projects/product" component={ProductPage} />
             <Route path="/thank-you" component={ThankYou} />
             <Route component={NoMatch} />
           </Switch>

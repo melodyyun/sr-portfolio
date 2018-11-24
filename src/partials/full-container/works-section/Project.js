@@ -48,7 +48,7 @@ const ProjectContainer = styled.div`
 
   .project-info-container {
     position: absolute;
-    padding: 20px;
+    padding: 15px;
     bottom: 0;
     width: 100%;
     height: 60%;

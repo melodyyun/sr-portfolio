@@ -62,10 +62,10 @@ class Works extends React.Component {
     const projects = [
       {
         type: "Marketing",
-        name: "Khabib vs McGregor",
+        name: "UFC 229: Khabib vs. McGregor",
         link: "khabib-vs-mcgregor",
         description:
-          "UFC229 Ultimate showdown between world champions Khabib vs McGregor",
+          "2.4M PPV Buys. Spearheading marketing for the largest UFC event",
         imgHoverSrc: "./assets/images/ufc229Portrait.jpeg",
         imgHoverAlt: "Black and white photo of Conor McGregor in the ring",
         imgSrc: "./assets/images/ufc229.jpeg",
@@ -75,17 +75,17 @@ class Works extends React.Component {
         type: "Project Managment",
         name: "FlipGive",
         link: "flipgive",
-        description: "Where we give flips to people >:D",
+        description: "Own the brand development of FlipGive to market eCommerce fundraising platform.",
         imgHoverSrc: "./assets/images/ufc229Portrait.jpeg",
         imgHoverAlt: "Black and white photo of Conor in the ring",
         imgSrc: "./assets/images/ufc229.jpeg",
         imgAlt: "Official poster for UFC229 Conor vs Khabib"
       },
       {
-        type: "Analytics",
-        name: "All the Data and stuffzz",
-        link: "link",
-        description: "Much smarts very data",
+        type: "Product",
+        name: "Bell Marketing",
+        link: "product",
+        description: "Developing innovative solutions and exciting customers through unforgettable campaigns.",
         imgHoverSrc: "./assets/images/ufc229Portrait.jpeg",
         imgHoverAlt: "Black and white photo of Conor in the ring",
         imgSrc: "./assets/images/ufc229.jpeg",
