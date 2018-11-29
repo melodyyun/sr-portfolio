@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import Button from '../../utility/Button';
+import React from "react";
+import styled from "styled-components";
+import Button from "../../utility/Button";
 
 const MainTitle = styled.div`
   color: ${props => props.theme.white};
@@ -17,7 +17,7 @@ const MainTitle = styled.div`
   }
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     height: 200px;
@@ -86,7 +86,7 @@ const Title = () => {
         Bringing <span className="yellow">unforgettable</span> marketing
         experiences to life.
       </p>
-      <Button href="#works" text={'Works'} />
+      <Button href="#works" text={"Works"} />
     </MainTitle>
   );
 };
