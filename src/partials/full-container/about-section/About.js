@@ -107,7 +107,7 @@ const About = () => {
           alt="Saad and his friends atop a dune buggy in Peru"
         />
         <div className="about-text">
-          <h2>Who am I?</h2>
+          <h2>Meet Saad</h2>
           <h4>Marketing | Product | Project specialist at your service.</h4>
           <p>
             I'm Saad, a passionate and driven mid-level marketing professional

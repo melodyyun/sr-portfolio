@@ -7,6 +7,7 @@ import UfcPage from "./partials/project-pages/UfcPage";
 import FlipGivePage from "./partials/project-pages/FlipGivePage";
 import ThankYou from "./partials/ThankYou";
 import NoMatch from "./partials/NoMatch";
+import ScrollTop from "./ScrollTop";
 
 //Extract our Sass variables into a JS object
 /* eslint-disable*/
@@ -18,14 +19,16 @@ class App extends Component {
     return (
       <BrowserRouter>
         <ThemeProvider theme={theme}>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/projects/khabib-vs-mcgregor" component={UfcPage} />
-            <Route path="/projects/flipgive" component={FlipGivePage} />
-            <Route path="/projects/product" component={ProductPage} />
-            <Route path="/thank-you" component={ThankYou} />
-            <Route component={NoMatch} />
-          </Switch>
+          <ScrollTop>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/projects/khabib-vs-mcgregor" component={UfcPage} />
+              <Route path="/projects/flipgive" component={FlipGivePage} />
+              <Route path="/projects/product" component={ProductPage} />
+              <Route path="/thank-you" component={ThankYou} />
+              <Route component={NoMatch} />
+            </Switch>
+          </ScrollTop>
         </ThemeProvider>
       </BrowserRouter>
     );
