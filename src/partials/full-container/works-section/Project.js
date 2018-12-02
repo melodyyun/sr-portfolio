@@ -125,7 +125,7 @@ const ProjectContainer = styled.div`
       position: relative;
     }
   }
-
+/*
   img.hover {
     height: 100%;
     border-radius: 10px;
@@ -133,6 +133,7 @@ const ProjectContainer = styled.div`
       background: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255, 0.6) 80%);
     }
   }
+  */
 `;
 
 class Project extends React.Component {
@@ -155,8 +156,8 @@ class Project extends React.Component {
     return (
       <Link to={`/projects/${this.props.link}`}>
         <ProjectContainer
-          onMouseEnter={this.changeImg}
-          onMouseLeave={this.changeImg}
+        // onMouseEnter={this.changeImg}
+        // onMouseLeave={this.changeImg}
         >
           <div className="project-info-container">
             <h4 className="project-type">{this.props.type}</h4>

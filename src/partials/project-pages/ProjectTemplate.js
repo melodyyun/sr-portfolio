@@ -40,6 +40,10 @@ const TemplateContainer = styled.section`
       line-height: 1.2em;
       color: grey;
 
+      @media (max-width: 768px) {
+          font-size: 40px;
+        }
+
       .em {
         font-family: auto;
         z-index: -1;
@@ -52,6 +56,10 @@ const TemplateContainer = styled.section`
         position: absolute;
         left: 15%;
         top: 5px;
+
+        @media (max-width: 768px) {
+          font-size: 80px;
+        }
       }
     }
 
@@ -66,6 +74,11 @@ const TemplateContainer = styled.section`
       .blocktext {
         padding: 20px;
         width: 50%;
+        box-sizing: border-box;
+
+        @media (max-width: 768px) {
+          width: 100%;
+        }
       }
     }
   }
@@ -96,45 +109,66 @@ const TemplateContainer = styled.section`
     }
   }
 
-  .link {
-    position: fixed;
-    padding: 20px;
-    color: ${props => props.theme.yellow};
-    font-size: 30px;
-    text-decoration: none;
-    background: ${props => props.theme.blue};
-    z-index: 3;
-    box-shadow: ${props => props.theme.boxShadow};
-
-    &:hover {
-      box-shadow: ${props => props.theme.boxShadowHover};
-    }
-
-    span {
-      position relative;
-
-      .fa-chevron-left{
-        &:nth-of-type(2){
-          margin-right: 5px;
-        }
-      }
-
-      .fa-chevron-right{
-        &:nth-of-type(1){
-          margin-left: 5px;
-        }
-      }
+  .img{
+    img{
+      width: 100%;
     }
   }
 
-  .link-home {
-    left: 0;
-    top: 70%;
-  }
+  .link-container{
+    @media (max-width: 768px) {
+      display: flex;
+    }
 
-  .link-next {
-    right: 0;
-    top: 70%;
+    .link {
+      position: fixed;
+      padding: 20px;
+      color: ${props => props.theme.yellow};
+      font-size: 30px;
+      text-decoration: none;
+      background: ${props => props.theme.blue};
+      z-index: 3;
+      box-shadow: ${props => props.theme.boxShadow};
+      top: 70%;
+      
+      @media (max-width: 1200px){
+        font-size: 16px;
+      }
+
+      @media (max-width: 768px) {
+        position: relative;
+        width: 50%;
+      }
+
+      &:hover {
+        box-shadow: ${props => props.theme.boxShadowHover};
+      }
+
+      span {
+        position relative;
+
+        .fa-chevron-left{
+          &:nth-of-type(2){
+            margin-right: 5px;
+          }
+        }
+
+        .fa-chevron-right{
+          &:nth-of-type(1){
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+
+    .link-home {
+      left: 0;
+    }
+
+    .link-next {
+      right: 0;
+      text-align: right;
+    }
   }
 `;
 
@@ -151,14 +185,36 @@ const Template = props => {
         <div className="row">
           <div className="blocktext">
             {props.project.textblock1.map((paragraph, i) => {
-              return <P id={i} text={paragraph} />;
+              return <P key={i} text={paragraph} />;
             })}
           </div>
           <div className="blocktext">
             {props.project.textblock2.map((paragraph, i) => {
-              return <P id={i} text={paragraph} />;
+              return <P key={i} text={paragraph} />;
             })}
           </div>
+        </div>
+        <div className="img">
+          <img src={props.project.imgSub} alt={props.project.imgSubAlt} />
+        </div>
+        <div className="link-container">
+          <Link to={`/`} className="link link-home">
+            <span>
+              <i className="fas arrow1 fa-chevron-left" />
+              <i className="fas arrow1 fa-chevron-left" />
+              Home
+            </span>
+          </Link>
+          <Link
+            to={`/projects/${props.project.nextLink}`}
+            className="link link-next"
+          >
+            <span>
+              {props.project.nextProject}
+              <i className="fas arrow1 fa-chevron-right" />
+              <i className="fas arrow1 fa-chevron-right" />
+            </span>
+          </Link>
         </div>
       </div>
       <div className="image-container">
@@ -168,23 +224,6 @@ const Template = props => {
           alt={props.project.imgMainAlt}
         />
       </div>
-      <Link to={`/`} className="link link-home">
-        <span>
-          <i class="fas arrow1 fa-chevron-left" />
-          <i class="fas arrow1 fa-chevron-left" />
-          Home
-        </span>
-      </Link>
-      <Link
-        to={`/projects/${props.project.nextLink}`}
-        className="link link-next"
-      >
-        <span>
-          {props.project.nextProject}
-          <i class="fas arrow1 fa-chevron-right" />
-          <i class="fas arrow1 fa-chevron-right" />
-        </span>
-      </Link>
     </TemplateContainer>
   );
 };

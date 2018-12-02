@@ -16,12 +16,14 @@ class ProductPage extends React.Component {
         "In order to drive sales, it was paramount that you understood your customer, your marketing channels, seasonality in your campaigns and promotions and lastly, understood the competitive market. Leading our On Demand storefront merchandising strategy was another key responsibility that helped develop my product management knowledge. Through the exciting enhancements created like the Santa Tracker for Fibe TV customers, we were able to delight customers over the holidays with a Free Movie, brought right to your storefront.",
         "When a TV was left inactive, brilliant screensavers would showcase the latest and greatest films available. When there was a new installment in a franchise coming out in theatres, a bundle of the previous could be available to customers for a discounted price. The marketing possibilities were endless and it allowed us to bring the love of the big screen home on the best platform to watch."
       ],
-    
       imgMain:
         "https://images.unsplash.com/photo-1461151304267-38535e780c79?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=672765fc591fb6401d969b8c2e03517b&auto=format&fit=crop&w=1190&q=80",
-      imgMainAlt: "Television with Bell screensaver featuring The Avengers: Infinity War",
+      imgMainAlt:
+        "Television with Bell screensaver featuring The Avengers: Infinity War",
       nextLink: "khabib-vs-mcgregor",
-      nextProject: "UFC 229"
+      nextProject: "UFC 229",
+      imgSub: "http://melodyyun.com/saad/assets/images/AvengersSS.png",
+      imgSubAlt: "Official Bell Screen Saver for UFC229"
     };
     return (
       <ProjectContainer id={"ufc-page"}>

@@ -66,8 +66,8 @@ class Works extends React.Component {
         link: "khabib-vs-mcgregor",
         description:
           "2.4M PPV Buys. Spearheading marketing for the largest UFC event",
-        imgHoverSrc: "./assets/images/ufc229Portrait.jpeg",
-        imgHoverAlt: "Black and white photo of Conor McGregor in the ring",
+        // imgHoverSrc: "./assets/images/ufc229Portrait.jpeg",
+        // imgHoverAlt: "Black and white photo of Conor McGregor in the ring",
         imgSrc: "./assets/images/ufc229.jpeg",
         imgAlt: "Official poster for UFC229 Khabib vs McGregor"
       },
@@ -75,20 +75,22 @@ class Works extends React.Component {
         type: "Project Managment",
         name: "FlipGive",
         link: "flipgive",
-        description: "Own the brand development of FlipGive to market eCommerce fundraising platform.",
-        imgHoverSrc: "./assets/images/ufc229Portrait.jpeg",
-        imgHoverAlt: "Black and white photo of Conor in the ring",
-        imgSrc: "./assets/images/ufc229.jpeg",
-        imgAlt: "Official poster for UFC229 Conor vs Khabib"
+        description:
+          "Own the brand development of FlipGive to market eCommerce fundraising platform.",
+        // imgHoverSrc: "./assets/images/flipgive.jpeg",
+        // imgHoverAlt: "Black and white photo of Conor in the ring",
+        imgSrc: "./assets/images/kid.jpg",
+        imgAlt: "FlipGive header"
       },
       {
         type: "Product",
         name: "Bell Marketing",
         link: "product",
-        description: "Developing innovative solutions and exciting customers through unforgettable campaigns.",
-        imgHoverSrc: "./assets/images/ufc229Portrait.jpeg",
-        imgHoverAlt: "Black and white photo of Conor in the ring",
-        imgSrc: "./assets/images/ufc229.jpeg",
+        description:
+          "Developing innovative solutions and exciting customers through unforgettable campaigns.",
+        // imgHoverSrc: "./assets/images/ufc229Portrait.jpeg",
+        // imgHoverAlt: "Black and white photo of Conor in the ring",
+        imgSrc: "./assets/images/movies.jpg",
         imgAlt: "Official poster for UFC229 Conor vs Khabib"
       }
     ];
