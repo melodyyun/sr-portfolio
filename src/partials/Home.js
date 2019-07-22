@@ -24,9 +24,9 @@ const Bg = styled.div`
   @media (max-width: 1024px) {
     background: url("./assets/images/contrast-sea.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
-    background-position: center !important;
+    background-position: center center !important;
     width: 100%;
     height: 100%;
   }

@@ -1,7 +1,6 @@
 import React from "react";
 import ProjectContainer from "./ProjectContainer";
 import Template from "./ProjectTemplate";
-import Border from "../Border";
 
 class ProductPage extends React.Component {
   render() {
@@ -28,7 +27,6 @@ class ProductPage extends React.Component {
     return (
       <ProjectContainer id={"ufc-page"}>
         <Template project={projectInfo} />
-        <Border />
       </ProjectContainer>
     );
   }

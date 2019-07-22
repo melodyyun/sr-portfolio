@@ -1,7 +1,6 @@
 import React from "react";
 import ProjectContainer from "./ProjectContainer";
 import Template from "./ProjectTemplate";
-import Border from "../Border";
 
 class FlipGivePage extends React.Component {
   render() {
@@ -27,7 +26,6 @@ class FlipGivePage extends React.Component {
     return (
       <ProjectContainer id={"ufc-page"}>
         <Template project={projectInfo} />
-        <Border />
       </ProjectContainer>
     );
   }

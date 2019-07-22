@@ -126,7 +126,7 @@ const TemplateContainer = styled.section`
       color: ${props => props.theme.yellow};
       font-size: 30px;
       text-decoration: none;
-      background: ${props => props.theme.blue};
+      background: ${props => props.theme.blueTransparent};
       z-index: 3;
       box-shadow: ${props => props.theme.boxShadow};
       top: 70%;

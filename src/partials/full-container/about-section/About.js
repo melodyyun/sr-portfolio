@@ -6,7 +6,7 @@ const AboutContainer = styled.div`
   color: ${props => props.theme.white};
   max-width: 650px;
   position: relative;
-  top: -80px;
+  top: -120px;
   transition: all 0.3s linear;
 
   @media (max-width: 840px) {

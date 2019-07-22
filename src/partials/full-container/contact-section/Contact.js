@@ -59,7 +59,7 @@ const ContactContainer = styled.div`
 
     @media (max-width: 1200px) {
       max-width: 536px;
-      width: 100%;
+      width: 536px;
     }
 
     @media (max-width: 840px) {
@@ -83,6 +83,10 @@ const ContactContainer = styled.div`
       padding: 10px;
       border: none;
       font-size: 16px;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
       &::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
         color: rgba(225, 225, 225, 0.5);
@@ -103,6 +107,9 @@ const ContactContainer = styled.div`
 
     input[type="submit"] {
       cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
 
       &:hover {
         color: ${props => props.theme.yellow};
